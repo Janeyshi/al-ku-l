@@ -1,0 +1,8 @@
+- index.php is our home page
+- the user can browse the product page even without logging in
+- the user can add to cart even without logging in
+- the user cannot Confirm Products, meaning the last stage in view cart where the user redirected to the confirmation page,  without logging in
+- the site will redirect the user to the logging in page if the user tried to use a feature that is only available if you logged in
+- when clicking the profile page it will redirect the user to login page if not logged in
+- inside the profile page, info about the user + Purchase history(tentative) since not required
+- reciept page will be after confiming the transaction 
