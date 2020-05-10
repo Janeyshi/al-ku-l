@@ -5,4 +5,5 @@
 - the site will redirect the user to the logging in page if the user tried to use a feature that is only available if you logged in
 - when clicking the profile page it will redirect the user to login page if not logged in
 - inside the profile page, info about the user + Purchase history(tentative) since not required
-- reciept page will be after confiming the transaction 
+- reciept page will be after confiming the transaction
+- home page is our about page

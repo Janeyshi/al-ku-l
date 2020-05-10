@@ -18,17 +18,20 @@
       <div href="index.php" class="navbar-brand">ALAK SHOP</div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <li class="nav-item <?php if(isActive('order-form.php')) echo 'active'; ?>">
-            <a class="nav-link" href="order-form.php">Products</a>
+          <li class="nav-item <?php if(isActive('index.php')) echo 'active'; ?>">
+            <a class="nav-link" href= "index.php">Home</a>
           </li>
-          <li class="nav-item <?php if(isActive('price-list.php')) echo 'active'; ?>">
-            <a class="nav-link" href="price-list.php">Profile</a>
+          <li class="nav-item <?php if(isActive('browse-product.php')) echo 'active'; ?>">
+            <a class="nav-link" href="browse-product.php">Products</a>
           </li>
-          <li class="nav-item <?php if(isActive('price-list.php')) echo 'active'; ?>">
-            <a class="nav-link" href="price-list.php">Log in</a>
+          <li class="nav-item <?php if(isActive('profile.php')) echo 'active'; ?>">
+            <a class="nav-link" href="profile.php">Profile</a>
           </li>
-          <li class="nav-item <?php if(isActive('price-list.php')) echo 'active'; ?>">
-            <a class="nav-link" href="price-list.php">View Cart</a>
+          <li class="nav-item <?php if(isActive('login.php')) echo 'active'; ?>">
+            <a class="nav-link" href="login.php">Log in</a>
+          </li>
+          <li class="nav-item <?php if(isActive('view-cart.php')) echo 'active'; ?>">
+            <a class="nav-link" href="view-cart.php">View Cart</a>
           </li>
         </ul>
       </div>
