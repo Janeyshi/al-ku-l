@@ -7,3 +7,4 @@
 - inside the profile page, info about the user + Purchase history(tentative) since not required
 - reciept page will be after confiming the transaction
 - home page is our about page
+- to check copy this link: http://localhost/al-ku-l/Finals/index.php
