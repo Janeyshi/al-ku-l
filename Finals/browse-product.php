@@ -10,7 +10,7 @@
         </thead>
         <tbody>
           <!-- Content -->
-          <h5>Product Page</h5>
+          <h5>Product Page Guest</h5>
 
         </tbody>
       </table>

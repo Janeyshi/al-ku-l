@@ -19,14 +19,20 @@
       <div href="index.php" class="navbar-brand"><strong> THE ALAK SHOP </strong><i class="fas fa-cocktail"></i></div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <li class="nav-item <?php if(isActive('index.php')) echo 'active'; ?>">
-            <a class="nav-link" href= "index.php">Home <i class="fas fa-home"></i></a>
+          <li class="nav-item <?php if(isActive('home-user.php')) echo 'active'; ?>">
+            <a class="nav-link" href= "home-user.php">Home <i class="fas fa-home"></i></a>
           </li>
-          <li class="nav-item <?php if(isActive('browse-product.php')) echo 'active'; ?>">
-            <a class="nav-link" href="browse-product.php">Products <i class="fas fa-wine-bottle"></i></a>
+          <li class="nav-item <?php if(isActive('browse-products-user.php')) echo 'active'; ?>">
+            <a class="nav-link" href="browse-products-user.php">Products <i class="fas fa-wine-bottle"></i></a>
           </li>
-          <li class="nav-item <?php if(isActive('login.php')) echo 'active'; ?>">
-            <a class="nav-link" href="login.php">Log in <i class="fas fa-id-card-alt"></i></a>
+          <li class="nav-item <?php if(isActive('profile.php')) echo 'active'; ?>">
+            <a class="nav-link" href="profile.php">Profile <i class="fas fa-users"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">Log out <i class="fas fa-id-card-alt"></i></a>
+          </li>
+          <li class="nav-item <?php if(isActive('view-cart.php')) echo 'active'; ?>">
+            <a class="nav-link" href="view-cart.php">View Cart <i class="fas fa-shopping-cart"></i></a>
           </li>
         </ul>
       </div>
