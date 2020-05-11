@@ -2,7 +2,7 @@
   require_once('view/header-user.php');
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <h3 class="card-title">Profile Page</h3>
+    <h3 class="card-title">receipt Page</h3>
     <form action="process-order.php" method="post">
       <table class="table">
         <thead>
@@ -10,7 +10,7 @@
         </thead>
         <tbody>
           <!-- Content -->
-          <h5>Profile Page</h5>
+          <h5>receipt Page</h5>
 
         </tbody>
       </table>
