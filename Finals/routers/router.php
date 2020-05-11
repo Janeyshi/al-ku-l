@@ -1,11 +1,14 @@
 <?php
 include '../databaseConnections/connect.php';
+include '../model/account.php';
 $success=false;
+$user = new Account();
+$user->instantiate();
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$user->__set('username', $_POST['username']);
+$user->__set('password', $_POST['password']);
 
-$result = mysqli_query($con, "SELECT * FROM accounts WHERE username='$username' AND password='$password'");
+$result = mysqli_query($con, "SELECT * FROM accounts WHERE username='$user->username' AND password='$user->password'");
 while($row = mysqli_fetch_array($result))
 {
 	$success = true;
@@ -14,12 +17,13 @@ while($row = mysqli_fetch_array($result))
 
 if ($success == true) {
 	session_start();
-	$_SESSION['customer_id']=session_id();
+	$_SESSION['sess_id']=session_id();
 	$_SESSION['user_id'] = $user_id;
 
 	header("location: ../home-user.php");
 } else {
 	$message = "wrong answer";
 	echo "<script type='text/javascript'>alert('$message');</script>";
+	header("location: ../login.php");
 }
  ?>
