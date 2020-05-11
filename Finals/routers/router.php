@@ -1,4 +1,4 @@
-<<?php
+<?php
 include '../databaseConnections/connect.php';
 $success=false;
 

@@ -2,9 +2,10 @@
 session_start();
 
 if (isset($_SESSION['customer_id'])) {
-  header("location:index.php");
+  header("location:home-user.php");
   exit();
 } else {
+}
  ?>
 
 <?php
@@ -53,6 +54,24 @@ if (isset($_SESSION['customer_id'])) {
 
   <?php require_once('view/footer.php'); ?>
 
-<<?php
-}
- ?>
+    <!-- modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"><span class="center-text">Register</span></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            LAMAN
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Register</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <?php require_once('view/footer.php'); ?>

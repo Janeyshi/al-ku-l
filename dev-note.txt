@@ -1,10 +1,16 @@
-- index.php is our home page
-- the user can browse the product page even without logging in
-- the user can add to cart even without logging in
-- the user cannot Confirm Products, meaning the last stage in view cart where the user redirected to the confirmation page,  without logging in
-- the site will redirect the user to the logging in page if the user tried to use a feature that is only available if you logged in
-- when clicking the profile page it will redirect the user to login page if not logged in
-- inside the profile page, info about the user + Purchase history(tentative) since not required
-- reciept page will be after confiming the transaction
-- home page is our about page
+Guest User  can do
+- Home page which is index.php about us stuff
+- Product page can browse only no add to cart button
+- Login
+
+Logged in User can do
+- Home page user same with index but user version
+- Profile Page where user info are available
+- Product page where the user can search, browse, and the add to cart button is part
+- log out button where it will redirect the user to index.php
+- view cart page where the user can view his/her Cart
+- after in view cart cofirm Purchase button is there to redirect the user to confirmation.php
+- after putting the details needed in confirmation page it will redirect to receipt.php the cart will be empty
+
+
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php
