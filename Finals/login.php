@@ -2,9 +2,10 @@
 session_start();
 
 if (isset($_SESSION['customer_id'])) {
-  header("location:index.php");
+  header("location:home-user.php");
   exit();
 } else {
+}
  ?>
 
 <?php
@@ -22,30 +23,32 @@ if (isset($_SESSION['customer_id'])) {
         <tbody>
 
           <!-- USERNAME! -->
-          <table align="center">
-            <tr>
-              <td>
-                <i class="fas fa-user"></i>
-              </td>
-              <td>
-                  <input name="username" id="username" placeholder="Username" type="text" required>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <i class="fas fa-lock"></i>
-              </td>
-              <td>
-                  <input name="password" id="password" placeholder="Password" type="password" required>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <input type="submit" value="Login" class="btn btn-success">
-                <button type="button"  class="btn btn-success" data-toggle="modal" data-target="#registerModal">Register</button>
-              </td>
-            </tr>
-          </table>
+          <div class="container">
+            <table align="center">
+              <tr>
+                <td>
+                  <i class="fas fa-user"></i>
+                </td>
+                <td>
+                    <input name="username" id="username" placeholder="Username" type="text" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fas fa-lock"></i>
+                </td>
+                <td>
+                    <input name="password" id="password" placeholder="Password" type="password" required>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input type="submit" value="Login" class="btn btn-success">
+                  <button type="button"  class="btn btn-success" data-toggle="modal" data-target="#registerModal">Register</button>
+                </td>
+              </tr>
+            </table>
+          </div>
         </tbody>
       </table>
     </form>
@@ -71,7 +74,3 @@ if (isset($_SESSION['customer_id'])) {
       </div>
   </div>
   <?php require_once('view/footer.php'); ?>
-
-<<?php
-}
- ?>
