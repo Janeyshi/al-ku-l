@@ -9,51 +9,83 @@
  <h3 class="card-title">Login Page</h3>
 
   <form method="post" action="register.php">
-    <!-- USERNAME -->
-  	<div>
-  	  <label>Username</label>
-  	  <input type="text" name="username">
-  	</div>
 
-    <!-- PASSWORD -->
-    <div>
-  	  <label>Password</label>
-  	  <input type="password" name="password">
-  	</div>
+    <table align="center">
+      <!-- USERNAME -->
+      <tr>
+        <td>
+          <label>Username</label>
+        </td>
+        <td>
+          <input type="text" name="username">
+        </td>
+      </tr>
 
-    <!-- EMAIL -->
-  	<div>
-  	  <label>Email</label>
-  	  <input type="email" name="email">
-  	</div>
+      <!-- PASSWORD -->
+      <tr>
+        <td>
+           <label>Password</label>
+        </td>
+        <td>
+          <input type="password" name="password">
+        </td>
+      </tr>
 
-    <!-- FIRST NAME -->
-    <div>
-      <label>First Name</label>
-      <input type="text" name="firstName">
-    </div>
+      <!-- EMAIL -->
+      <tr>
+        <td>
+          <label>Email</label>
+        </td>
+        <td>
+           <input type="email" name="email">
+        </td>
+      </tr>
 
-    <!-- MIDDLE NAME -->
-    <div>
-      <label>Middle Name</label>
-      <input type="text" name="middleName">
-    </div>
+      <!-- FIRST NAME -->
+      <tr>
+        <td>
+            <label>First Name</label>
+        </td>
+        <td>
+            <input type="text" name="firstName">
+        </td>
+      </tr>
 
-    <!-- LAST NAME -->
-    <div>
-      <label>Last Name</label>
-      <input type="text" name="lastName">
-    </div>
+      <!-- MIDDLE NAME -->
+      <tr>
+        <td>
+          <label>Middle Name</label>
+        </td>
+        <td>
+          <input type="text" name="middleName">
+        </td>
+      </tr>
 
-    <!-- SUFFIX -->
-    <div>
-      <label>Suffix</label>
-      <input type="text" name="suffix">
-    </div>
+        <!-- LAST NAME -->
+      <tr>
+        <td>
+          <label>Last Name</label>
+        </td>
+        <td>
+          <input type="text" name="lastName">
+        </td>
+      </tr>
 
-  	<div class="input-group">
-  	  <button type="submit" class="btn btn-success" name="reg_user">Register</button>
-  	</div>
+      <!-- SUFFIX -->
+      <tr>
+        <td>
+          <label>Suffix</label>
+        </td>
+        <td>
+          <input type="text" name="suffix">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit" class="btn btn-success" name="reg_user">Register</button>
+        </td>
+      </tr>
+    </table>
   </form>
 
 <?php require_once('view/footer.php'); ?>
