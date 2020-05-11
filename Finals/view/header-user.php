@@ -29,7 +29,7 @@
             <a class="nav-link" href="profile.php">Profile <i class="fas fa-users"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Log out <i class="fas fa-id-card-alt"></i></a>
+            <a class="nav-link" href="routers/logout.php">Log out <i class="fas fa-id-card-alt"></i></a>
           </li>
           <li class="nav-item <?php if(isActive('view-cart.php')) echo 'active'; ?>">
             <a class="nav-link" href="view-cart.php">View Cart <i class="fas fa-shopping-cart"></i></a>
