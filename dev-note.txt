@@ -4,7 +4,6 @@ Guest User  can do
 - Login
 
 Logged in User can do
-- Home page user same with index but user version
 - Profile Page where user info are available
 - Product page where the user can search, browse, and the add to cart button is part
 - log out button where it will redirect the user to index.php
