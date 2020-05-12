@@ -20,7 +20,7 @@
               <td id="rum1">
                 <span class="productName"><?php echo $_POST["productName"];?></span>
                 <br />
-                <img src="<?php echo $_POST["productImg"];?>" alt="rum 1" height="200px" width="200px" class="productImage"/>
+                <img src="<?php echo $_POST["productImg"];?>" alt="rum 1" height="700px" width="700px" class="productImageBig"/>
                 <p class="productDescription">
                   <?php echo $_POST["productDesc"];?>
                   <br /><br />
