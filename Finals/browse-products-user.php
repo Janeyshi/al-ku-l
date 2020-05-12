@@ -2,7 +2,7 @@
   require_once('view/header-user.php');
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <form action="model/list-of-product.php" method="post">
+    <form action="single-product-page.php" method="post">
       <table class="table">
         <thead>
           <h1 class="center-text"> The Alak Shop <i class="fas fa-cocktail"></i></h1>
@@ -68,35 +68,22 @@
                 <span class="productName">Rum 1</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="rum1"><img src="images/pic1.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="rum2">
                 <span class="productName">Rum 2</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="rum2"><img src="images/pic2.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="rum3">
                 <span class="productName">Rum 3</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="rum3"><img src="images/pic3.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -114,35 +101,22 @@
                 <span class="productName">Vodka 1</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="vodka1"><img src="images/pic1.jpg" alt="vodka 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="vodka2">
                 <span class="productName">Vodka 2</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="vodka2"><img src="images/pic2.jpg" alt="vodka 2" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="vodka3">
                 <span class="productName">Vodka 3</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="vodka3"><img src="images/pic3.jpg" alt="vodka 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -159,35 +133,22 @@
                 <span class="productName">Whisky 1</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="whisky1"><img src="images/pic1.jpg" alt="whisky 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="whisky2">
                 <span class="productName">Whisky 2</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="whisky2"><img src="images/pic2.jpg" alt="whisky 2" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. 100.00
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="whisky3">
                 <span class="productName">Whisky 3</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="whisky3"><img src="images/pic3.jpg" alt="whisky 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -204,35 +165,22 @@
                 <span class="productName">Gin 1</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="gin1"><img src="images/pic1.jpg" alt="gin 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="gin2">
                 <span class="productName">Gin 2</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="gin2"><img src="images/pic2.jpg" alt="gin 2" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="gin3">
                 <span class="productName">Gin 3</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="gin3"><img src="images/pic3.jpg" alt="gin 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -249,35 +197,22 @@
                 <span class="productName">Tequila 1</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="tequila1"><img src="images/pic1.jpg" alt="tequila 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="tequila2">
                 <span class="productName">Tequila 2</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="tequila2"><img src="images/pic2.jpg" alt="tequila 2" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="tequila3">
                 <span class="productName">Tequila 3</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="tequila3"><img src="images/pic3.jpg" alt="tequila 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -294,35 +229,22 @@
                 <span class="productName">Brandy 1</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="brandy1"><img src="images/pic1.jpg" alt="brandy 1" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="brandy2">
                 <span class="productName">Brandy 2</span>
                 <br />
                 <button type="submit" class="btn btn-light" name="brandy2"><img src="images/pic2.jpg" alt="brandy 2" height="200px" width="200px" class="productImage"/></button>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <br />
+                  click the picture to view details
               </td>
               <td id="brandy3">
                 <span class="productName">Brandy 3</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="brandy3"><img src="images/pic3.jpg" alt="brandy 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
