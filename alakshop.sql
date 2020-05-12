@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2020 at 08:04 AM
+-- Generation Time: May 12, 2020 at 04:43 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -31,19 +32,22 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
   `firstName` varchar(255) NOT NULL,
   `middleName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
-  `suffix` varchar(255) NOT NULL
+  `suffix` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `firstName`, `middleName`, `lastName`, `suffix`) VALUES
-(1, 'jameesliaam', 'liampogi', '201801020@iacademy.edu.ph\r\n', 'James Liam', 'Raymundo', 'De Jesus', '');
+INSERT INTO `accounts` (`id`, `username`, `password`, `firstName`, `middleName`, `lastName`, `suffix`, `email`) VALUES
+(1, 'test', '1', 'h', 'i', 'o', 'P', 'Senpia@Kimochi.eddu.ph\r\n'),
+(2, 'S', '1', 'fff', 'D', 'd', 'd', 'saasdda@fdfda'),
+(3, 'jjnjn', ',,mll,', 'lll', ';,;,;.', 'hgugui', 'iyfdftyhiop', 'fxfxfz@gujhjk'),
+(4, 'Benedick', '1', 'Bene', 'D', 'Dick', 'BD', 'GGser@Onichan.edu.ph');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +67,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
