@@ -12,7 +12,7 @@ Logged in User can do
 - after in view cart cofirm Purchase button is there to redirect the user to confirmation.php
 - after putting the details needed in confirmation page it will redirect to receipt.php the cart will be empty
 
-
+- import the sql file alakshop.sql to your mysql localhost in a db named alakshop
 - add to cart will be inserting to cart table in mysql db
 - view cart will retrieve all cart data in cart table in mysql db
 - order will have 2 orderconfirmation page 1 for cash on delivery and 1 for card
