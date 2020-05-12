@@ -1,27 +1,19 @@
 <?php
-  session_start();
-  include("model/product.php");
   if (isset($_SESSION['sess_id'])) {
     require_once('view/header-user.php');
   } else {
     require_once('view/header.php');
   }
  ?>
-
-<?php
-  require_once('view/header.php');
- ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <h3 class="card-title">Home Page</h3>
-    <form action="process-order.php" method="post">
+    <h3 class="card-title">Product not found</h3>
+    <form action="browse-product.php" method="post" name="form1">
       <table class="table">
         <thead>
-          <h1 class="center-text"> Hello World </h1>
+          <h1 class="center-text"> Product NOT Found <i class="fas fa-search"></i></h1>
         </thead>
         <tbody>
-          <!-- Content -->
-          <h5>Home Page</h5>
-
+            <center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> Click me to go back </button></center>
         </tbody>
       </table>
     </form>

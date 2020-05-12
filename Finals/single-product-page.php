@@ -1,12 +1,11 @@
 <?php
-session_start();
-//to ensure guest feature only for guest
-if (isset($_SESSION['sess_id'])) {
-
- ?>
-<?php
+  session_start();
   include("model/product.php");
-  require_once('view/header-user.php');
+  if (isset($_SESSION['sess_id'])) {
+    require_once('view/header-user.php');
+  } else {
+    require_once('view/header.php');
+  }
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <form action="routers/add-to-cart.php" method="post">
@@ -17,115 +16,114 @@ if (isset($_SESSION['sess_id'])) {
         <tbody>
           <!-- Content -->
             <?php
-
               $prod = new Product();
 
               //connect to db
               $con = mysqli_connect('localhost', 'root', '', 'alakshop');
 
               //rum datas
-              if (isset($_POST['rum1'])) {
+              if (isset($_POST['1'])) {
                   $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['rum2'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['2'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 2");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['rum3'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['3'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 3");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
               }
 
               //Vodka data
-              else if (isset($_POST['vodka1'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              else if (isset($_POST['4'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 4");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['vodka2'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['5'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 5");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['vodka3'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['6'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 6");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
               }
 
               //Whisky data
-              else if (isset($_POST['whisky1'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              else if (isset($_POST['7'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 7");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['whisky2'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['8'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 8");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['whisky3'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['9'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 9");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
               }
 
               //Gin data
-              else if (isset($_POST['gin1'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              else if (isset($_POST['10'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 10");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['gin2'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['11'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 11");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['gin3'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['12'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 12");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
               }
 
               //Tequila data
-              else if (isset($_POST['tequila1'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              else if (isset($_POST['13'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 13");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['tequila2'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['14'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 14");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['tequila3'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['15'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 15");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
               }
 
               //Brandy data
-              else if (isset($_POST['brandy1'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              else if (isset($_POST['16'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 16");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['brandy2'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['17'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 17");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
-              } else if (isset($_POST['brandy3'])) {
-                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");
+              } else if (isset($_POST['18'])) {
+                  $result = mysqli_query($con, "SELECT * FROM products WHERE id = 18");
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
@@ -152,16 +150,18 @@ if (isset($_SESSION['sess_id'])) {
             </tr>
           </table>
         </tbody>
-      </table>
-      <input type="hidden" name="productName" value="<?php echo $prod->productName;?>">
-      <input type="hidden" name="productPrice" value = <?php echo $prod->productPrice;?>>
-      <input type="hidden" name="productImg" value="<?php echo $prod->imgSource;?>">
-      <button type="submit" value="Add to Cart" class="btn btn-danger"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
-      <a href="browse-products-user.php"><input type="register" value="Back" class="btn btn-secondary"></a>
-    </form>
-    <?php require_once('view/footer.php');}
-      else {
-        header("location:routers/logout.php");
-        exit();
+      </table><?php
+       ?>
+      <?php if (isset($_SESSION['sess_id'])) {
+        echo '<input type="hidden" name="productName" value="'.$prod->productName.'">
+        <input type="hidden" name="productPrice" value = '.$prod->productPrice.'>
+        <input type="hidden" name="productImg" value="'.$prod->imgSource.'">
+        <button type="submit" value="Add to Cart" class="btn btn-danger"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
+        <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
+      </form>';
+    } else {
+        echo '<a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>';
       }
+
+      require_once('view/footer.php');
     ?>

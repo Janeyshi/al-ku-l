@@ -1,24 +1,19 @@
 <?php
-session_start();
-//to ensure guest feature only for guest
-if (isset($_SESSION['sess_id'])) {
-  header("location:browse-products-user.php");
-  exit();
-} else {
- ?>
-
-<?php
-  require_once('view/header.php');
+  session_start();
+  include("model/product.php");
+  if (isset($_SESSION['sess_id'])) {
+    require_once('view/header-user.php');
+  } else {
+    require_once('view/header.php');
+  }
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <form action="process-order.php" method="post">
       <table class="table">
         <thead>
           <h1 class="center-text"> The Alak Shop <i class="fas fa-cocktail"></i></h1>
         </thead>
         <tbody>
           <!-- Content -->
-
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
             Search <i class="fas fa-search"></i>
@@ -35,36 +30,18 @@ if (isset($_SESSION['sess_id'])) {
                   </button>
                 </div>
                 <div class="modal-body">
-
-                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the product name.." title="Type in a name">
-                  <p>
-                    Product list:
-                  </p>
-                  <ul id="myUL">
-                    <li><a href="#">Rum 1</a></li>
-                    <li><a href="#">Rum 2</a></li>
-                    <li><a href="#">Rum 3</a></li>
-                    <li><a href="#">Vodka 1</a></li>
-                    <li><a href="#">Vodka 2</a></li>
-                    <li><a href="#">Vodka 3</a></li>
-                    <li><a href="#">Whisky 1</a></li>
-                    <li><a href="#">Whisky 2</a></li>
-                    <li><a href="#">Whisky 3</a></li>
-                    <li><a href="#">Gin 1</a></li>
-                    <li><a href="#">Gin 2</a></li>
-                    <li><a href="#">Gin 3</a></li>
-                    <li><a href="#">Tequila 1</a></li>
-                    <li><a href="#">Tequila 2</a></li>
-                    <li><a href="#">Tequila 3</a></li>
-                    <li><a href="#">Brandy 1</a></li>
-                    <li><a href="#">Brandy 2</a></li>
-                    <li><a href="#">Brandy 3</a></li>
-                  </ul>
+                  <form action="routers/search.php" method="post">
+                    <input type="text" id="searchName" name="searchName" placeholder="Search for the product name.." title="Type in a name">
+                    <ul id="myUL">
+                      <li><button type="submit" class="btn btn-secondary" name="search">Search <i class="fas fa-search"></i></button></li>
+                    </ul>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
 
+          <form action="single-product-page.php" method="post">
           <!-- Rum -->
           <table class="productTable" align="center" cellspacing="10" cellpadding="10">
             <tr>
@@ -76,36 +53,23 @@ if (isset($_SESSION['sess_id'])) {
               <td id="rum1">
                 <span class="productName">Rum 1</span>
                 <br />
-                <img src="images/pic1.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="1"><img src="images/pic1.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="rum2">
                 <span class="productName">Rum 2</span>
                 <br />
-                <img src="images/pic2.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="2"><img src="images/pic2.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="rum3">
                 <span class="productName">Rum 3</span>
                 <br/>
-                <img src="images/pic3.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/>
+                <button type="submit" class="btn btn-light" name="3"><img src="images/pic3.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -122,36 +86,23 @@ if (isset($_SESSION['sess_id'])) {
               <td id="vodka1">
                 <span class="productName">Vodka 1</span>
                 <br />
-                <img src="images/pic1.jpg" alt="vodka 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="4"><img src="images/pic1.jpg" alt="vodka 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="vodka2">
                 <span class="productName">Vodka 2</span>
                 <br />
-                <img src="images/pic2.jpg" alt="vodka 2" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="5"><img src="images/pic2.jpg" alt="vodka 2" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="vodka3">
                 <span class="productName">Vodka 3</span>
                 <br/>
-                <img src="images/pic3.jpg" alt="vodka 3" height="200px" width="200px" class="productImage"/>
+                <button type="submit" class="btn btn-light" name="6"><img src="images/pic3.jpg" alt="vodka 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -167,36 +118,23 @@ if (isset($_SESSION['sess_id'])) {
               <td id="whisky1">
                 <span class="productName">Whisky 1</span>
                 <br />
-                <img src="images/pic1.jpg" alt="whisky 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="7"><img src="images/pic1.jpg" alt="whisky 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="whisky2">
                 <span class="productName">Whisky 2</span>
                 <br />
-                <img src="images/pic2.jpg" alt="whisky 2" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. 100.00
-                </p>
+                <button type="submit" class="btn btn-light" name="8"><img src="images/pic2.jpg" alt="whisky 2" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="whisky3">
                 <span class="productName">Whisky 3</span>
                 <br/>
-                <img src="images/pic3.jpg" alt="whisky 3" height="200px" width="200px" class="productImage"/>
+                <button type="submit" class="btn btn-light" name="9"><img src="images/pic3.jpg" alt="whisky 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -212,36 +150,23 @@ if (isset($_SESSION['sess_id'])) {
               <td id="gin1">
                 <span class="productName">Gin 1</span>
                 <br />
-                <img src="images/pic1.jpg" alt="gin 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="10"><img src="images/pic1.jpg" alt="gin 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="gin2">
                 <span class="productName">Gin 2</span>
                 <br />
-                <img src="images/pic2.jpg" alt="gin 2" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="11"><img src="images/pic2.jpg" alt="gin 2" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="gin3">
                 <span class="productName">Gin 3</span>
                 <br/>
-                <img src="images/pic3.jpg" alt="gin 3" height="200px" width="200px" class="productImage"/>
+                <button type="submit" class="btn btn-light" name="12"><img src="images/pic3.jpg" alt="gin 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -257,36 +182,23 @@ if (isset($_SESSION['sess_id'])) {
               <td id="tequila1">
                 <span class="productName">Tequila 1</span>
                 <br />
-                <img src="images/pic1.jpg" alt="tequila 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="13"><img src="images/pic1.jpg" alt="tequila 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="tequila2">
                 <span class="productName">Tequila 2</span>
                 <br />
-                <img src="images/pic2.jpg" alt="tequila 2" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="14"><img src="images/pic2.jpg" alt="tequila 2" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="tequila3">
                 <span class="productName">Tequila 3</span>
                 <br/>
-                <img src="images/pic3.jpg" alt="tequila 3" height="200px" width="200px" class="productImage"/>
+                <button type="submit" class="btn btn-light" name="15"><img src="images/pic3.jpg" alt="tequila 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
@@ -302,59 +214,28 @@ if (isset($_SESSION['sess_id'])) {
               <td id="brandy1">
                 <span class="productName">Brandy 1</span>
                 <br />
-                <img src="images/pic1.jpg" alt="brandy 1" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="16"><img src="images/pic1.jpg" alt="brandy 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="brandy2">
                 <span class="productName">Brandy 2</span>
                 <br />
-                <img src="images/pic2.jpg" alt="brandy 2" height="200px" width="200px" class="productImage"/>
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                <button type="submit" class="btn btn-light" name="17"><img src="images/pic2.jpg" alt="brandy 2" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                  click the picture to view details
               </td>
               <td id="brandy3">
                 <span class="productName">Brandy 3</span>
                 <br/>
-                <img src="images/pic3.jpg" alt="brandy 3" height="200px" width="200px" class="productImage"/>
+                <button type="submit" class="btn btn-light" name="18"><img src="images/pic3.jpg" alt="brandy 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
-                <p class="productDescription">
-                  description wazzup bois rock n roll lets go bois
-                  ahegao face is the beast
-                  <br /><br />
-                  Price: Php. <span class="productPricce">100.00</span>
-                </p>
+                  click the picture to view details
               </td>
             </tr>
           </table>
-
-          <script>
-          function myFunction() {
-              var input, filter, ul, li, a, i, txtValue;
-              input = document.getElementById("myInput");
-              filter = input.value.toUpperCase();
-              ul = document.getElementById("myUL");
-              li = ul.getElementsByTagName("li");
-              for (i = 0; i < li.length; i++) {
-                  a = li[i].getElementsByTagName("a")[0];
-                  txtValue = a.textContent || a.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                      li[i].style.display = "";
-                  } else {
-                      li[i].style.display = "none";
-                  }
-              }
-          }
-          </script>
         </tbody>
       </table>
     </form>
-  <?php require_once('view/footer.php'); }?>
+    <?php require_once('view/footer.php');
+    ?>
