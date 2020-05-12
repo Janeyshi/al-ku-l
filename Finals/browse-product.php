@@ -72,7 +72,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="rum2">
@@ -83,7 +83,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="rum3">
@@ -95,7 +95,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
             </tr>
@@ -118,7 +118,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="vodka2">
@@ -129,7 +129,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="vodka3">
@@ -141,7 +141,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
             </tr>
@@ -163,7 +163,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="whisky2">
@@ -186,7 +186,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
             </tr>
@@ -208,7 +208,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="gin2">
@@ -219,7 +219,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="gin3">
@@ -231,7 +231,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
             </tr>
@@ -253,7 +253,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="tequila2">
@@ -264,7 +264,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="tequila3">
@@ -276,7 +276,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
             </tr>
@@ -298,7 +298,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="brandy2">
@@ -309,7 +309,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
               <td id="brandy3">
@@ -321,7 +321,7 @@
                   description wazzup bois rock n roll lets go bois
                   ahegao face is the beast
                   <br /><br />
-                  Price: Php. 100.00
+                  Price: Php. <span class="productPricce">100.00</span>
                 </p>
               </td>
             </tr>

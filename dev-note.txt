@@ -13,4 +13,9 @@ Logged in User can do
 - after putting the details needed in confirmation page it will redirect to receipt.php the cart will be empty
 
 
+- add to cart will be inserting to cart table in mysql db
+- view cart will retrieve all cart data in cart table in mysql db
+- order will have 2 orderconfirmation page 1 for cash on delivery and 1 for card
+- at the same time order will have 2 table in the db one for order-using-card and one for order-using-cash
+
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php
