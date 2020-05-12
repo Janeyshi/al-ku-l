@@ -17,6 +17,7 @@
               <center>
                 <img src="images/error404.jpg" alt="error 404" height="400px" width="400px" />
               </center>
+              <br />
               <center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> Click me to go to the home <i class="fas fa-home"></i> page </button></center>
           </tbody>
         </table>
