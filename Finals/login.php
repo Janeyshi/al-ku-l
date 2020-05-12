@@ -41,8 +41,10 @@ if (isset($_SESSION['sess_id'])) {
               </td>
             </tr>
             <tr>
-              <td colspan="2">
+              <td>
                 <input type="submit" value="Login" class="btn btn-success">
+              </td>
+              <td>
                 <a href="register.php"><input type="register" value="Register" class="btn btn-danger"></a>
               </td>
             </tr>
