@@ -156,8 +156,15 @@
         echo '<input type="hidden" name="productName" value="'.$prod->productName.'">
         <input type="hidden" name="productPrice" value = '.$prod->productPrice.'>
         <input type="hidden" name="productImg" value="'.$prod->imgSource.'">
-        <button type="submit" value="Add to Cart" class="btn btn-danger"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
-        <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
+        <br />
+        <center>
+        <div>
+          Quantity: <input type="number" name="productQty"  min="0" required/>
+          <br /><br />
+          <button type="submit" value="Add to Cart" class="btn btn-danger" name="reg_user"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
+          <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
+        </div>
+        </center>
       </form>';
     } else {
         echo '<a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>';

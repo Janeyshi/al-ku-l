@@ -13,6 +13,12 @@
           <h1 class="center-text"> The Alak Shop <i class="fas fa-cocktail"></i></h1>
         </thead>
         <tbody>
+          <?php
+            if(isset($_SESSION['insert_success'])){
+              echo $_SESSION['insert_success'];
+              unset($_SESSION['insert_success']);
+            }
+           ?>
           <!-- Content -->
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
