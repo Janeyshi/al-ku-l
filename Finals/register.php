@@ -1,3 +1,11 @@
+<?php
+//to ensure guest feature only for guest
+if (isset($_SESSION['sess_id'])) {
+  header("location:browse-products-user.php");
+  exit();
+} else {
+ ?>
+
 <?php include('routers/register-router.php') ?>
 
 <?php
@@ -88,4 +96,6 @@
     </table>
   </form>
 
-<?php require_once('view/footer.php'); ?>
+<?php require_once('view/footer.php');
+}
+?>

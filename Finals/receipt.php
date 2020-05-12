@@ -1,4 +1,13 @@
 <?php
+session_start();
+//to ensure guest feature only for guest
+if (isset($_SESSION['guest'])) {
+  header("location:index.php");
+  exit();
+} else {
+ ?>
+
+<?php
   require_once('view/header-user.php');
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -15,4 +24,4 @@
         </tbody>
       </table>
     </form>
-  <?php require_once('view/footer.php'); ?>
+  <?php require_once('view/footer.php'); }?>

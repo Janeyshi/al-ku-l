@@ -22,6 +22,6 @@ if (isset($_POST['reg_user'])) {
     //ONCE REGISTRATION IS SUCCESSFUL
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
+  	$_SESSION['success'] = '<h3 class="center-text">Registration Complete</h3>';
   	header('location: login.php');
 }

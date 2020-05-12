@@ -19,11 +19,12 @@ if ($success == true) {
 	session_start();
 	$_SESSION['sess_id']=session_id();
 	$_SESSION['user_id'] = $user_id;
-
 	header("location: ../home-user.php");
 } else {
-	$message = "wrong answer";
-	echo "<script type='text/javascript'>alert('$message');</script>";
+	session_start();
+	$user_id = "guest";
+	$_SESSION['error'] = '<h3 class="center-text">Invalid username or password!!!</h3>';
+	$_SESSION['user_id'] = $user_id;
 	header("location: ../login.php");
 }
  ?>
