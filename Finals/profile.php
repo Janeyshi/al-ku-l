@@ -77,7 +77,7 @@
 		if ($_SESSION['sess_id']==session_id()) {
 			header("location:profile.php");
 		} else {
-			header("location:logout.php");
+			header("location:routers/logout.php");
 	}
 }
   ?>

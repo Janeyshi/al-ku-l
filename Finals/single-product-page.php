@@ -1,10 +1,8 @@
 <?php
 session_start();
 //to ensure guest feature only for guest
-if (isset($_SESSION['guest'])) {
-  header("location:browse-products.php");
-  exit();
-} else {
+if (isset($_SESSION['sess_id'])) {
+
  ?>
 <?php
   include("model/product.php");
@@ -161,4 +159,9 @@ if (isset($_SESSION['guest'])) {
       <button type="submit" value="Add to Cart" class="btn btn-danger"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
       <a href="browse-products-user.php"><input type="register" value="Back" class="btn btn-secondary"></a>
     </form>
-  <?php require_once('view/footer.php'); }?>
+    <?php require_once('view/footer.php');}
+      else {
+        header("location:routers/logout.php");
+        exit();
+      }
+    ?>
