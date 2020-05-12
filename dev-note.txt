@@ -17,4 +17,7 @@ Logged in User can do
 - order will have 2 orderconfirmation page 1 for cash on delivery and 1 for card
 - at the same time order will have 2 table in the db one for order-using-card and one for order-using-cash
 
+- make a .htaccess file and put this code "ErrorDocument 404 /al-ku-l/Finals/error-404.php"
+/al-ku-l/Finals/error-404.php will depend on your root directory make sure to put .htaccess in your root which is htdocs in xampp
+
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php
