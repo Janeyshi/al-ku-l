@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 07:10 AM
+-- Generation Time: May 13, 2020 at 05:19 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -47,7 +47,30 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `firstName`, `middleName`,
 (1, 'test', '1', 'h', 'i', 'o', 'P', 'Senpia@Kimochi.eddu.ph\r\n'),
 (2, 'S', '1', 'fff', 'D', 'd', 'd', 'saasdda@fdfda'),
 (3, 'jjnjn', ',,mll,', 'lll', ';,;,;.', 'hgugui', 'iyfdftyhiop', 'fxfxfz@gujhjk'),
-(4, 'Benedick', '1', 'Bene', 'D', 'Dick', 'BD', 'GGser@Onichan.edu.ph');
+(4, 'Benedick', '1', 'Bene', 'D', 'Dick', 'BD', 'GGser@Onichan.edu.ph'),
+(5, 'e', '1', 'ww', 'w', 'www', 'w', 'asda@a'),
+(6, 'D', 's', 's', 'd', 'dd', 'd', 'GGser@FOOK.edu.ph');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `productName` varchar(255) NOT NULL,
+  `productPrice` int(11) NOT NULL,
+  `productImg` varchar(255) NOT NULL,
+  `productQty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `productName`, `productPrice`, `productImg`, `productQty`) VALUES
+(1, 'Rum 1', 100, 'images/pic1.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -70,8 +93,8 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `imgSrc`, `type`, `price`, `description`) VALUES
 (1, 'Rum 1', 'images/pic1.jpg', 'Rum', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
-(2, 'Rum 1', 'images/pic2.jpg', 'Rum', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
-(3, 'Rum 1', 'images/pic3.jpg', 'Rum', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
+(2, 'Rum 2', 'images/pic2.jpg', 'Rum', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
+(3, 'Rum 3', 'images/pic3.jpg', 'Rum', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
 (4, 'Vodka 1', 'images/pic1.jpg', 'Vodka', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
 (5, 'Vodka 2', 'images/pic2.jpg', 'Vodka', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
 (6, 'Vodka 3', 'images/pic3.jpg', 'Vodka', '100.00', 'description wazzup bois rock n roll lets go bois ahegao face is the beast'),
@@ -99,6 +122,12 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -112,7 +141,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`
