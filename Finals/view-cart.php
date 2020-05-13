@@ -15,71 +15,119 @@ if (isset($_SESSION['sess_id'])) {
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">View Cart Page</h3>
-    <form action="confirmation.php" method="post">
+    <!-- <form action="confirmation.php" method="post"> -->
       <table class="table">
         <thead>
         </thead>
         <tbody>
+          <?php
+            if(isset($_SESSION['message'])){
+              echo $_SESSION['message']; //rock n roll
+              unset($_SESSION['message']);
+            } else if(isset($_SESSION['message'])){
+              echo $_SESSION['message'];
+              unset($_SESSION['message']);
+            }
+           ?>
           <!-- Content -->
           <h5>View Cart Page</h5>
-
-          <?php
-          $sql = "SELECT id, productName, productPrice, productImg, productQty FROM cart";
-          $result = $con->query($sql);
-
-          if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()){
-            // echo "id: " . $row["id"]. " - Product Name: " . $row["productName"]. " " . $row["imgSrc"]. "- Product Quantity: " . $row["productQty"]. "<br>";
-            // echo '<img src="'.$row[imageSrc]'" alt="rum 1" height="700px" width="700px" class="productImageBig"/>'
-            echo '<table align="center">
-              <tr>
+          <form action="routers/remove.php" method="post">
+            <?php
+            $sql = "SELECT id, productName, productPrice, productImg, productQty FROM cart";
+            $result = $con->query($sql);
+            $ctr = 0;
+            if($result->num_rows > 0){
+              while($row = $result->fetch_assoc()){
+              // echo "id: " . $row["id"]. " - Product Name: " . $row["productName"]. " " . $row["imgSrc"]. "- Product Quantity: " . $row["productQty"]. "<br>";
+              // echo '<img src="'.$row[imageSrc]'" alt="rum 1" height="700px" width="700px" class="productImageBig"/>'
+              $ctr = $ctr + 1;
+              echo '<table align="center">
+                <tr>
+                  <td>
+                    Product Name:
+                  </td>
+                  <td>
+                    <h5>'.$row["productName"].'</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Product Quantity:
+                  </td>
+                   <td>
+                    <input type="number" name="productQty'.$ctr.'"  min="0" required value="'.$row["productQty"].'"/>
+                   </td>
+                   <td>
+                     <button type="submit"  class="btn btn-warning" name="productQtyBtn'.$ctr.'"> Update </button>
+                   </td>
+                </tr>
+                <tr>
+                  <th>
+                    Price:
+                  </th>
+                  <td>
+                    Php. '.$row["productPrice"].'
+                  </td>
+                </tr>
+                <tr>
                 <td>
-                  Product Name:
+                  <img src="'.$row["productImg"].'" alt="rum 1" height="250px" width="250px" class="productImageBig"/>
                 </td>
-                <td>
-                  <h5>'.$row["productName"].'</h5>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Product Quantity:
-                </td>
-                 <td>
-                  <input type="number" name="productQty"  min="0" required value="'.$row["productQty"].'"/>
-                 </td>
-              </tr>
-              <tr>
-                <th>
-                  Price:
-                </th>
-                <td>
-                  Php. '.$row["productPrice"].'
-                </td>
-              </tr>
-              <tr>
-              <td>
-                <img src="'.$row["productImg"].'" alt="rum 1" height="250px" width="250px" class="productImageBig"/>
-              </td>
-              </tr>
-              <tr>
-                <td>
-                  <button type="remove"  class="btn btn-danger"> <i class="fas fa-trash"></i> Remove Item</button>
-                </td>
-              </tr>
-            </table>
-            <br />
-            <br />';
+                </tr>
+                <tr>
+                  <td>
+                    <input type="hidden" name="id'.$ctr.'" value="'.$row["id"].'">
+                    <button type="submit"  class="btn btn-danger" name="'.$ctr.'"> <i class="fas fa-trash"></i> Remove Item</button>
+                  </td>
+                </tr>
+              </table>
+              <input type="hidden" name="ctr" value="'.$ctr.'">
+              <br />
+              <br />';
+              }
+            }else {
+              echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
             }
-          }else {
-            echo "NO ITEMS IN CART!";
-          }
-          $con->close();
-           ?>
+            $con->close();
+             ?>
 
-          <button class="btn btn-success"> Go </button>
+          </form>
+          <form action="confirmation.php" method="post">
+
+            <table align="center">
+              <tr>
+                <th colspan="2">
+                  <h3 class="center-text">Mode of payment</h3>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="cash" name="modePayment" value="cash" required>
+                </td>
+                <td>
+                  <label for="cash">cash</label><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" id="Card" name="modePayment" value="Card">
+                </td>
+                <td>
+                    <label for="Card">Card</label><br>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                    <button class="btn btn-success"> Go </button>
+                </td>
+              </tr>
+            </table>>
+
+            </table>
+          </form>
         </tbody>
       </table>
-    </form>
+    <!-- </form> -->
     <?php require_once('view/footer.php');}
       else {
         header("location:routers/logout.php");
