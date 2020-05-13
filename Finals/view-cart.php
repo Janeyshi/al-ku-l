@@ -34,16 +34,41 @@ if (isset($_SESSION['sess_id'])) {
             echo '<table align="center">
               <tr>
                 <td>
-                  Product Name: <h5>'.$row["productName"].'</h5>
+                  Product Name:
                 </td>
                 <td>
-                  Product Quantity: <input type="number" name="productQty"  min="0" required value="'.$row["productQty"].'"/>
-                </td>
-                <td>
-                  <img src="'.$row["productImg"].'" alt="rum 1" height="250px" width="250px" class="productImageBig"/>
+                  <h5>'.$row["productName"].'</h5>
                 </td>
               </tr>
-            </table>';
+              <tr>
+                <td>
+                  Product Quantity:
+                </td>
+                 <td>
+                  <input type="number" name="productQty"  min="0" required value="'.$row["productQty"].'"/>
+                 </td>
+              </tr>
+              <tr>
+                <th>
+                  Price:
+                </th>
+                <td>
+                  Php. '.$row["productPrice"].'
+                </td>
+              </tr>
+              <tr>
+              <td>
+                <img src="'.$row["productImg"].'" alt="rum 1" height="250px" width="250px" class="productImageBig"/>
+              </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="remove"  class="btn btn-danger"> <i class="fas fa-trash"></i> Remove Item</button>
+                </td>
+              </tr>
+            </table>
+            <br />
+            <br />';
             }
           }else {
             echo "NO ITEMS IN CART!";
