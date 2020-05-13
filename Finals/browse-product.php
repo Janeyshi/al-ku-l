@@ -61,6 +61,8 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="1"><img src="images/BacardiSuperior.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 557
+                <br />
                   click the picture to view details
               </td>
               <td id="rum2">
@@ -68,12 +70,16 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="2"><img src="images/AppletonEstate.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 1500
+                <br />
                   click the picture to view details
               </td>
               <td id="rum3">
                 <span class="productName">Kraken Black Spiced Rum</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="3"><img src="images/kraken.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 1510.31
                 <br />
                   click the picture to view details
               </td>
@@ -94,6 +100,8 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="4"><img src="images/Smirnoff.jpg" alt="vodka 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 453.33
+                <br />
                   click the picture to view details
               </td>
               <td id="vodka2">
@@ -101,12 +109,16 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="5"><img src="images/Absolut.jpg" alt="vodka 2" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 1649
+                <br />
                   click the picture to view details
               </td>
               <td id="vodka3">
                 <span class="productName">Finlandia</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="6"><img src="images/Finlandia.jpg" alt="vodka 3" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 1050
                 <br />
                   click the picture to view details
               </td>
@@ -126,6 +138,8 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="7"><img src="images/Teeling.jpg" alt="whisky 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 2996.13
+                <br />
                   click the picture to view details
               </td>
               <td id="whisky2">
@@ -133,12 +147,16 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="8"><img src="images/Ballantine.jpg" alt="whisky 2" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 1301.28
+                <br />
                   click the picture to view details
               </td>
               <td id="whisky3">
                 <span class="productName">Yamazaki 12</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="9"><img src="images/Yamazaki.jpg" alt="whisky 3" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 18950
                 <br />
                   click the picture to view details
               </td>
@@ -154,23 +172,29 @@
             </tr>
             <tr>
               <td id="gin1">
-                <span class="productName">Gin 1</span>
+                <span class="productName">Hendricks Gin</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="10"><img src="images/pic1.jpg" alt="gin 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="10"><img src="images/hendricks.jpg" alt="gin 1" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 2290
                 <br />
                   click the picture to view details
               </td>
               <td id="gin2">
-                <span class="productName">Gin 2</span>
+                <span class="productName">The Bar Gin</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="11"><img src="images/pic2.jpg" alt="gin 2" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="11"><img src="images/thebar.jpg" alt="gin 2" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 95
                 <br />
                   click the picture to view details
               </td>
               <td id="gin3">
-                <span class="productName">Gin 3</span>
+                <span class="productName">Gin Bilog</span>
                 <br/>
-                <button type="submit" class="btn btn-light" name="12"><img src="images/pic3.jpg" alt="gin 3" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="12"><img src="images/ginbilog.jpg" alt="gin 3" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 55
                 <br />
                   click the picture to view details
               </td>
@@ -190,6 +214,8 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="13"><img src="images/OchoPlata.jpg" alt="tequila 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 3508.08
+                <br />
                   click the picture to view details
               </td>
               <td id="tequila2">
@@ -197,12 +223,16 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="14"><img src="images/cuervo.jpg" alt="tequila 2" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 1252.76
+                <br />
                   click the picture to view details
               </td>
               <td id="tequila3">
                 <span class="productName">1800 Tequila</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="15"><img src="images/1800Tequila.jpg" alt="tequila 3" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 1590
                 <br />
                   click the picture to view details
               </td>
@@ -222,6 +252,8 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="16"><img src="images/fundador.jpg" alt="brandy 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 1018.80
+                <br />
                   click the picture to view details
               </td>
               <td id="brandy2">
@@ -229,12 +261,16 @@
                 <br />
                 <button type="submit" class="btn btn-light" name="17"><img src="images/RemyMartin.jpg" alt="brandy 2" height="200px" width="200px" class="productImage"/></button>
                 <br />
+                Price: 1980.12
+                <br />
                   click the picture to view details
               </td>
               <td id="brandy3">
                 <span class="productName">Hennesy</span>
                 <br/>
                 <button type="submit" class="btn btn-light" name="18"><img src="images/Hennesy.jpg" alt="brandy 3" height="200px" width="200px" class="productImage"/></button>
+                <br />
+                Price: 1980.12
                 <br />
                   click the picture to view details
               </td>
