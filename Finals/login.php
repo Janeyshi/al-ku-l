@@ -1,11 +1,10 @@
-<<?php
+<?php
 session_start();
 
-if (isset($_SESSION['customer_id'])) {
+if (isset($_SESSION['sess_id'])) {
   header("location:home-user.php");
   exit();
 } else {
-}
  ?>
 
 <?php
@@ -23,54 +22,45 @@ if (isset($_SESSION['customer_id'])) {
         <tbody>
 
           <!-- USERNAME! -->
-          <div class="container">
-            <table align="center">
-              <tr>
-                <td>
-                  <i class="fas fa-user"></i>
-                </td>
-                <td>
-                    <input name="username" id="username" placeholder="Username" type="text" required>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <i class="fas fa-lock"></i>
-                </td>
-                <td>
-                    <input name="password" id="password" placeholder="Password" type="password" required>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input type="submit" value="Login" class="btn btn-success">
-                  <button type="button"  class="btn btn-success" data-toggle="modal" data-target="#registerModal">Register</button>
-                </td>
-              </tr>
-            </table>
-          </div>
+          <table align="center">
+            <tr>
+              <td>
+                <i class="fas fa-user"></i>
+              </td>
+              <td>
+                  <input name="username" id="username" placeholder="Username" type="text" required>
+              </td>
+            </tr>
+            <tr>
+              <!-- PASSWORD -->
+              <td>
+                <i class="fas fa-lock"></i>
+              </td>
+              <td>
+                  <input name="password" id="password" placeholder="Password" type="password" required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Login" class="btn btn-success">
+              </td>
+              <td>
+                <a href="register.php"><input type="register" value="Register" class="btn btn-danger"></a>
+              </td>
+            </tr>
+          </table>
+          <?php
+            if(isset($_SESSION['error'])){
+              echo $_SESSION['error'];
+              unset($_SESSION['error']);
+            }else if(isset($_SESSION['success'])){
+              echo $_SESSION['success'];
+              unset($_SESSION['success']);
+            }
+           ?>
         </tbody>
       </table>
     </form>
-
-    <!-- modal -->
-    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle"><span class="center-text">Register</span></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            LAMAN
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Register</button>
-          </div>
-        </div>
-      </div>
-  </div>
-  <?php require_once('view/footer.php'); ?>
+  <?php require_once('view/footer.php');
+    }
+  ?>

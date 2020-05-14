@@ -4,7 +4,6 @@ Guest User  can do
 - Login
 
 Logged in User can do
-- Home page user same with index but user version
 - Profile Page where user info are available
 - Product page where the user can search, browse, and the add to cart button is part
 - log out button where it will redirect the user to index.php
@@ -12,5 +11,13 @@ Logged in User can do
 - after in view cart cofirm Purchase button is there to redirect the user to confirmation.php
 - after putting the details needed in confirmation page it will redirect to receipt.php the cart will be empty
 
+- import the sql file alakshop.sql to your mysql localhost in a db named alakshop
+- add to cart will be inserting to cart table in mysql db
+- view cart will retrieve all cart data in cart table in mysql db
+- order will have 2 orderconfirmation page 1 for cash on delivery and 1 for card
+- at the same time order will have 2 table in the db one for order-using-card and one for order-using-cash
+
+- make a .htaccess file and put this code "ErrorDocument 404 /al-ku-l/Finals/error-404.php"
+/al-ku-l/Finals/error-404.php will depend on your root directory make sure to put .htaccess in your root which is htdocs in xampp
 
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php

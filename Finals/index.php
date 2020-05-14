@@ -1,4 +1,14 @@
 <?php
+  session_start();
+  include("model/product.php");
+  if (isset($_SESSION['sess_id'])) {
+    require_once('view/header-user.php');
+  } else {
+    require_once('view/header.php');
+  }
+ ?>
+
+<?php
   require_once('view/header.php');
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
