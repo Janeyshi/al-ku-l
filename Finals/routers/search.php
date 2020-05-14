@@ -28,6 +28,9 @@
           }
 
           if ($success == true) {
+            echo '<center>
+              <img src="../images/found.png" alt="error 404" height="400px" width="400px" />
+            </center>';
             echo '<input type="hidden" name="test" value = '.$product_id.'>';
             echo '<center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> Click me to proceed </button></center>';
           } else {

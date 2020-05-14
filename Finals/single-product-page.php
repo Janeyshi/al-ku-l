@@ -129,7 +129,7 @@
                   }
               }
             ?>
-          <!-- Rum -->
+            <!-- Show the picked item -->
           <table class="productTable" align="center" cellspacing="10" cellpadding="10">
             <tr>
               <th colspan="3">
@@ -141,6 +141,7 @@
                 <span class="productName"><?php echo $prod->productName;?></span>
                 <br />
                 <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="700px" width="700px" class="productImageBig"/>
+                <br /><br /><br />
                 <p class="productDescription">
                   <?php echo $prod->productDesc;?>
                   <br /><br />

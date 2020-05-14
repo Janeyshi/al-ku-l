@@ -37,10 +37,9 @@
                 </div>
                 <div class="modal-body">
                   <form action="routers/search.php" method="post">
-                    <input type="text" id="searchName" name="searchName" placeholder="Search for the product name.." title="Type in a name">
-                    <ul id="myUL">
-                      <li><button type="submit" class="btn btn-secondary" name="search">Search <i class="fas fa-search"></i></button></li>
-                    </ul>
+                    <input type="text" id="searchName" name="searchName" placeholder="Search for the product name.." title="Type in a name" size="50"> 
+                    <br />
+                    <button type="submit" class="btn btn-secondary" name="search">Search <i class="fas fa-search"></i></button>
                   </form>
                 </div>
               </div>
