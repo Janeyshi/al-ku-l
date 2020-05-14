@@ -8,9 +8,9 @@
  ?>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
  <link rel="stylesheet" type="text/css" href="CSS/style.css">
- <h3 class="card-title">Cash Checkout Page</h3>
+ <h3 class="card-title">Card Checkout Page</h3>
   <form method="post" action="routers/card-checkout-router.php">
-       <h5>Cash Checkout Page</h5>
+       <h5>Payment Details</h5>
     <table align="center">
       <!-- ADDRESS -->
       <tr>
