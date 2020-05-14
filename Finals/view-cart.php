@@ -33,7 +33,7 @@ if (isset($_SESSION['sess_id'])) {
           <h5>View Cart Page</h5>
           <form action="routers/remove.php" method="post">
             <?php
-            $sql = "SELECT id, productName, productPrice, productImg, productQty FROM cart";
+            $sql = "SELECT * FROM cart";
             $result = $con->query($sql);
             $ctr = 0;
             if($result->num_rows > 0){
@@ -48,6 +48,7 @@ if (isset($_SESSION['sess_id'])) {
                   </td>
                   <td>
                     <h5>'.$row["productName"].'</h5>
+
                   </td>
                 </tr>
                 <tr>
@@ -63,10 +64,22 @@ if (isset($_SESSION['sess_id'])) {
                 </tr>
                 <tr>
                   <th>
-                    Price:
+                    Total Price:
                   </th>
                   <td>
                     Php. '.$row["productPrice"].'
+                    <br />
+                    <input type="hidden" name="price'.$ctr.'" value="'.$row["productPrice"].'">
+                    <input type="hidden" name="origPrice'.$ctr.'" value="'.$row["originalPrice"].'">
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Price per piece:
+
+                  </th>
+                  <td>
+                    Php. '.$row["originalPrice"].'
                   </td>
                 </tr>
                 <tr>
@@ -87,6 +100,7 @@ if (isset($_SESSION['sess_id'])) {
               }
             }else {
               echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
+              $_SESSION['disable'] = "disabled";
             }
             $con->close();
              ?>
@@ -118,10 +132,10 @@ if (isset($_SESSION['sess_id'])) {
               </tr>
               <tr>
                 <td colspan="2">
-                    <button class="btn btn-success"> Go </button>
+                    <button class="btn btn-success" <?php if(isset($_SESSION['disable'])){echo $_SESSION['disable']; unset($_SESSION['disable']);} ?> > Go </button>
                 </td>
               </tr>
-            </table>>
+            </table>
 
             </table>
           </form>

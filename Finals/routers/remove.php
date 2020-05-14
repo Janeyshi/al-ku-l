@@ -2,23 +2,25 @@
 include '../databaseConnections/connect.php';
 
 $ctr = $_POST['ctr'];
-$sum = (int)$ctr;
-$i = "id";
-$u = "productQty";
+$convert = (int)$ctr;
+$idName = "id";
+$QtyName = "productQty";
 $btn = "productQtyBtn";
 $id = "";
+$originalPriceName = "origPrice";
 
 //SWEET CHILD OF MINEEEE
-for($a = $sum;$a > 0; $a--){
-  $id = $i . $a;  //this to get row id
-  $upd = $u . $a; //this to get productQty
-  $gg =  $btn . $a; //this btn update
-  echo 'this is a '.$a.'<br />';
-  if (isset($_POST[$a])) {
-    $num = $_POST[$id];
-    echo $num;
+for($i = $convert;$i > 0; $i--){
+  $idName = $idName . $i;  //this to get row id
+  $qtyName = $QtyName . $i; //this to get productQty
+  $btnName =  $btn . $i; //this btn update
+  $origP = $originalPriceName . $i; //getting orig price
+  echo 'this is a '.$i.'<br />';
+  if (isset($_POST[$i])) {
+    $id = $_POST[$idName];
+    echo $id;
     session_start();
-    $sql = "DELETE FROM cart WHERE id = '$num'";
+    $sql = "DELETE FROM cart WHERE id = '$id'";
     if (mysqli_query($con, $sql)) {
       	$_SESSION['message'] = '<h3 class="center-text">Item Removed from Cart</h3>';
     } else {
@@ -27,11 +29,15 @@ for($a = $sum;$a > 0; $a--){
     mysqli_close($con);
     header('location: ../view-cart.php');
   }
-  else if(isset($_POST[$gg])){
-    $num = $_POST[$id];
-    $qty = $_POST[$upd];
+  else if(isset($_POST[$btnName])){
+    $id = $_POST[$idName];
+    $qty = $_POST[$qtyName];
+    $originalPrice = $_POST[$origP];
+    $UpdatedPrice = $originalPrice * $qty;
+    echo $origP;
+    echo $UpdatedPrice;
     // session_start();
-    $sql = "UPDATE cart SET productQty='$qty' WHERE id = '$num'"; //MALI SQL KO RAW
+    $sql = "UPDATE cart SET productQty='$qty', productPrice ='$UpdatedPrice' WHERE id = '$id'"; //MALI SQL KO RAW
     if (mysqli_query($con, $sql)) {
         $_SESSION['message'] = '<h3 class="center-text">Item Updated from Cart</h3>';
     } else {
