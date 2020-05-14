@@ -7,13 +7,16 @@ $con = new mysqli($servername, $server_user, $server_pass, $dbname);
 session_start();
 $user_id = $_SESSION['user_id'];
 if (isset($_SESSION['sess_id'])) {
+  $totalQty = 0;
+  $totalPrice = 0;
+
 
 ?>
 <?php
   require_once('view/header-user.php');
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <h3 class="card-title">Confirm Checkout </h3>
+    <h3 class="card-title">Card Confirm Checkout </h3>
     <form action="routers/card-confirmation-router.php" method="post">
       <table class="table">
 
@@ -39,63 +42,45 @@ if (isset($_SESSION['sess_id'])) {
 
            ?>
           <table class="tbl-cart" cellpadding="10" cellspacing="1">
-            <tr>
+            <tr style="border: 1px solid black; background-color: #f2f2f2;">
               <th style="text-align:left;">Name</th>
               <th style="text-align:right;" width="2%">Quantity</th>
               <th style="text-align:right;" width="20%">Price</th>
             </tr>
+            
             <?php
-            // $user_id = $_SESSION['user_id'];
-            // $sql1 = "SELECT * FROM cart where user_id = '$user_id'"; //carts
-            // //
-            // // $result2 = $con->query($sql2);
-            //
-            // $result1 = $con->query($sql1); //pota baliktad pala kaya
-            //
-            // echo $user_id;
-            // $ctr = 0;
-            // $MOD = "";
-            // $address = "";
-            // if($result1->num_rows > 0){
-            //   while($row2 = mysqli_fetch_array($result2)){
-            //     $address = $row["address"];
-            //     $MOD = $row["modeOfPayment"];
-            //   }
-
+            
+            
             $sql = "SELECT * FROM cart where user_id = '$user_id'";
             $result = $con->query($sql);
             $ctr = 0;
             if($result->num_rows > 0){
+
               while($row = $result->fetch_assoc()){
+                $totalQty += $row["productQty"];
+                $totalPrice += $row["productPrice";
               $ctr = $ctr + 1;
+              
               echo '
-                <tr>
-                  <td>
+                <tr style="border: 1px solid black;">
+                  <td style="border: 1px solid black;">
                     <img src="'.$row["productImg"].'" alt="rum 1" height="100px" width="100px" class="productImageBig"/>'.'<strong>'.$row["productName"].'</strong>
                   </td>
                   <td style="text-align:right;">
                     '.$row["productQty"].'
                   </td>
-                  <td style="text-align:right;">
-                    Php '.$row["originalPrice"].'
+                  <td style="text-align:right; border: 1px solid black;">
+                    Php '.$row["productPrice"].'
                     <br />
                     <input type="hidden" name="price'.$ctr.'" value="'.$row["productPrice"].'">
                     <input type="hidden" name="origPrice'.$ctr.'" value="'.$row["originalPrice"].'">
                   </td>
                 </tr>
-                <tr>
-                  <td align="right"><strong>Total: </strong></td>
-                  <td align="right"> Php '.$row["productPrice"].'</td>
-                </tr>
-                <tr>
-                    <td align="left"><strong>Payment Method: </strong>'.$mod.'</td>
-                    <td align="left"><strong>Shipping Address: </strong>'.$address.' </td>
-                </tr>
-
-              <br />';
+                ';
               // <td align="left"><strong>Payment Method: </strong>'.$row["modeOfPayment"].'</td>
               // <td align="left"><strong>Shipping Address: </strong>'.$row["address"].' </td>
               //pota kanta ni ryne ah
+
               }
             }else {
               echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
@@ -103,6 +88,18 @@ if (isset($_SESSION['sess_id'])) {
             }
             $con->close();
              ?>
+             <tr style="border: 1px solid black;">
+                <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>
+               
+                <td align="right"><?php echo $totalQty ?></td>
+                
+                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>                                 
+             <tr>
+              <td><strong>Payment Method: </strong> <?php echo$mod ?></td></th>
+            </tr>
+            <tr>
+              <td><strong>Shipping Address: </strong><?php echo $address ?></td>
+            </tr>
           </table>
           <br>
           <div>

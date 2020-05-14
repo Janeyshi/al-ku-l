@@ -58,7 +58,7 @@
               <td id="rum1">
                 <span class="productName">Bacardi Superios</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="1"><img src="images/BacardiSuperior.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="1"><img src="images/bacardi.png" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 557
                 <br />
@@ -67,7 +67,7 @@
               <td id="rum2">
                 <span class="productName">Appleton Estate</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="2"><img src="images/AppletonEstate.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="2"><img src="images/appleton.png" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1500
                 <br />
@@ -76,7 +76,7 @@
               <td id="rum3">
                 <span class="productName">Kraken Black Spiced Rum</span>
                 <br/>
-                <button type="submit" class="btn btn-light" name="3"><img src="images/kraken.jpg" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="3"><img src="images/KrakenBlack.png" alt="rum 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1510.31
                 <br />
