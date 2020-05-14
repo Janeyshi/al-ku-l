@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2020 at 06:02 AM
+-- Generation Time: May 14, 2020 at 12:22 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -49,13 +49,16 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `username`, `password`, `firstName`, `middleName`, `lastName`, `suffix`, `email`, `modeOfPayment`, `creditCardNumber`, `expirationDate`, `CCV`, `address`) VALUES
-(1, 'test', '1', 'h', 'i', 'o', 'P', 'Senpia@Kimochi.eddu.ph\r\n', '', 0, '', '', ''),
+(1, 'test', '1', 'h', 'i', 'o', 'P', 'Senpia@Kimochi.eddu.ph\r\n', 'cash', 2147483647, 'FFFFFFFF', '234567', 'Sa Puso Ni Crush'),
 (2, 'S', '1', 'fff', 'D', 'd', 'd', 'saasdda@fdfda', '', 0, '', '', ''),
 (3, 'jjnjn', ',,mll,', 'lll', ';,;,;.', 'hgugui', 'iyfdftyhiop', 'fxfxfz@gujhjk', '', 0, '', '', ''),
 (4, 'Benedick', '1', 'Bene', 'D', 'Dick', 'BD', 'GGser@Onichan.edu.ph', '', 0, '', '', ''),
 (5, 'e', '1', 'ww', 'w', 'www', 'w', 'asda@a', '', 0, '', '', ''),
 (6, 'D', 's', 's', 'd', 'dd', 'd', 'GGser@FOOK.edu.ph', '', 0, '', '', ''),
-(7, 'jameesliaam', 'jamesliam', 'James Liam', 'Raymundo', 'De Jesus', '', 'jamesliamdejesus@gmail.com', '', 0, '', '', '');
+(7, 'jameesliaam', 'jamesliam', 'James Liam', 'Raymundo', 'De Jesus', '', 'jamesliamdejesus@gmail.com', '', 0, '', '', ''),
+(8, '', '', '', '', '', '', '', '', 0, '', '', ''),
+(9, '', '', '', '', '', '', '', '', 0, '', '', ''),
+(10, '', '', '', '', '', '', '', '', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -69,15 +72,17 @@ CREATE TABLE `cart` (
   `productPrice` float NOT NULL,
   `productImg` varchar(255) NOT NULL,
   `productQty` int(11) NOT NULL,
-  `originalPrice` float NOT NULL
+  `originalPrice` float NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `productName`, `productPrice`, `productImg`, `productQty`, `originalPrice`) VALUES
-(16, 'Ginebra San Miguel - Gin Bilog', 110, 'images/ginbilog.jpg', 2, 55);
+INSERT INTO `cart` (`id`, `productName`, `productPrice`, `productImg`, `productQty`, `originalPrice`, `user_id`) VALUES
+(19, 'Bacardi Superior', 1114, 'images/BacardiSuperior.jpg', 2, 557, 1),
+(20, 'Ginebra San Miguel - Gin Bilog', 110, 'images/ginbilog.jpg', 2, 55, 1);
 
 -- --------------------------------------------------------
 
@@ -148,13 +153,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `products`

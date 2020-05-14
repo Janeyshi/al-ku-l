@@ -54,7 +54,7 @@
       <tr>
         <td colspan="2">
           <button type="submit" class="btn btn-success" name="reg_user">Confirm Checkout</button>
-          <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
+          <a href="view-cart.php"><input type="button" value="Back" class="btn btn-secondary"></a>
         </td>
       </tr>
     </table>

@@ -4,7 +4,7 @@ session_start();
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'alakshop');
 
-// REGISTER USER
+// insert address USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
   $address = mysqli_real_escape_string($db, $_POST['address']);

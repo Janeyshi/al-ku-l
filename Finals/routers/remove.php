@@ -8,6 +8,7 @@ $QtyName = "productQty";
 $btn = "productQtyBtn";
 $id = "";
 $originalPriceName = "origPrice";
+$user_id = $_SESSION['user_id'];
 
 //SWEET CHILD OF MINEEEE
 for($i = $convert;$i > 0; $i--){
@@ -19,8 +20,7 @@ for($i = $convert;$i > 0; $i--){
   if (isset($_POST[$i])) {
     $id = $_POST[$idName];
     echo $id;
-    session_start();
-    $sql = "DELETE FROM cart WHERE id = '$id'";
+    $sql = "DELETE FROM cart WHERE id = '$id' and user_id = '$user_id'";
     if (mysqli_query($con, $sql)) {
       	$_SESSION['message'] = '<h3 class="center-text">Item Removed from Cart</h3>';
     } else {
@@ -37,7 +37,7 @@ for($i = $convert;$i > 0; $i--){
     echo $origP;
     echo $UpdatedPrice;
     // session_start();
-    $sql = "UPDATE cart SET productQty='$qty', productPrice ='$UpdatedPrice' WHERE id = '$id'"; //MALI SQL KO RAW
+    $sql = "UPDATE cart SET productQty='$qty', productPrice ='$UpdatedPrice' WHERE id = '$id' and user_id = '$user_id'"; //MALI SQL KO RAW
     if (mysqli_query($con, $sql)) {
         $_SESSION['message'] = '<h3 class="center-text">Item Updated from Cart</h3>';
     } else {

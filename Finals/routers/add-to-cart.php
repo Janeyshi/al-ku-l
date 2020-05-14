@@ -13,9 +13,10 @@ if (isset($_POST['reg_user'])) {
   $productImg = mysqli_real_escape_string($db, $_POST['productImg']);
   $productQty = mysqli_real_escape_string($db, $_POST['productQty']);
   $totalprice = $productPrice * $productQty;
+  $user_id = $_SESSION['user_id'];
     // INSERT INTO DATABASE
-  	$query = "INSERT INTO cart (productName, productPrice, productImg, productQty, originalPrice)
-    VALUES ('$productName', '$totalprice', '$productImg', '$productQty', '$productPrice')";
+  	$query = "INSERT INTO cart (productName, productPrice, productImg, productQty, originalPrice, user_id)
+    VALUES ('$productName', '$totalprice', '$productImg', '$productQty', '$productPrice', $user_id)";
 
     //ONCE REGISTRATION IS SUCCESSFUL
     $result = mysqli_query($db, $query);

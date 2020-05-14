@@ -33,7 +33,8 @@ if (isset($_SESSION['sess_id'])) {
           <h5>View Cart Page</h5>
           <form action="routers/remove.php" method="post">
             <?php
-            $sql = "SELECT * FROM cart";
+            $user_id = $_SESSION['user_id'];
+            $sql = "SELECT * FROM cart where user_id = '$user_id'";
             $result = $con->query($sql);
             $ctr = 0;
             if($result->num_rows > 0){
@@ -106,23 +107,25 @@ if (isset($_SESSION['sess_id'])) {
              ?>
 
           </form>
-            <table align="center" style="text-align:center;">
-              <tr>
-                <th>
-                  <h3 class="center-text">Mode of payment</h3>
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <a href="cashCheckout.php"><button class="btn btn-success"> cash </button></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="cardCheckout.php"><button class="btn btn-Warning"> Card </button></a>
-                </td>
-              </tr>
-            </table>
+              <form action="routers/modeOfPayment.php" method="post">
+                <table align="center" style="text-align:center;">
+                  <tr>
+                    <th>
+                      <h3 class="center-text">Mode of payment</h3>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="btn btn-success" name="cash"> cash </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="btn btn-Warning" name="card"> Card </button>
+                    </td>
+                  </tr>
+                </table>
+              </form>
             </table>
         </tbody>
       </table>
