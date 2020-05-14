@@ -97,7 +97,7 @@
               <td id="vodka1">
                 <span class="productName">Smirnoff Vodka</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="4"><img src="images/Smirnoff.jpg" alt="vodka 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="4"><img src="images/smirnoff.png" alt="vodka 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 453.33
                 <br />
@@ -106,7 +106,7 @@
               <td id="vodka2">
                 <span class="productName">Absolut</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="5"><img src="images/Absolut.jpg" alt="vodka 2" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="5"><img src="images/absolut.png" alt="vodka 2" height="200px" width="150px" class="productImage"/></button>
                 <br />
                 Price: 1649
                 <br />
@@ -115,7 +115,7 @@
               <td id="vodka3">
                 <span class="productName">Finlandia</span>
                 <br/>
-                <button type="submit" class="btn btn-light" name="6"><img src="images/Finlandia.jpg" alt="vodka 3" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="6"><img src="images/finlandia.png" alt="vodka 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1050
                 <br />
