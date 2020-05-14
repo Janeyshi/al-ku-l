@@ -18,6 +18,6 @@ if (isset($_POST['reg_user'])) {
     //ONCE REGISTRATION IS SUCCESSFUL
   	mysqli_query($db, $query);
   	$_SESSION['successAddress'] = '<h3 class="center-text">Information Inserted</h3>';
-  	header('location: ../cashConfirmation.php');
+  	header('location: ../cardConfirmation.php');
 }
 ?>
