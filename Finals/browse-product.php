@@ -135,7 +135,7 @@
               <td id="whisky1">
                 <span class="productName">Teeling Single Pot Still</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="7"><img src="images/Teeling.jpg" alt="whisky 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="7"><img src="images/teeling.png" alt="whisky 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 2996.13
                 <br />
@@ -144,7 +144,7 @@
               <td id="whisky2">
                 <span class="productName">Ballantine's Finest</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="8"><img src="images/Ballantine.jpg" alt="whisky 2" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="8"><img src="images/ballantine.png" alt="whisky 2" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1301.28
                 <br />
@@ -153,7 +153,7 @@
               <td id="whisky3">
                 <span class="productName">Yamazaki 12</span>
                 <br/>
-                <button type="submit" class="btn btn-light" name="9"><img src="images/Yamazaki.jpg" alt="whisky 3" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="9"><img src="images/yamazaki.png" alt="whisky 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 18950
                 <br />
@@ -211,7 +211,7 @@
               <td id="tequila1">
                 <span class="productName">Tequila Ocha Plata</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="13"><img src="images/OchoPlata.jpg" alt="tequila 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="13"><img src="images/tequila.png" alt="tequila 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 3508.08
                 <br />
@@ -220,7 +220,7 @@
               <td id="tequila2">
                 <span class="productName">Jose Cuervo</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="14"><img src="images/cuervo.jpg" alt="tequila 2" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="14"><img src="images/cuervo.png" alt="tequila 2" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1252.76
                 <br />
@@ -229,7 +229,7 @@
               <td id="tequila3">
                 <span class="productName">1800 Tequila</span>
                 <br/>
-                <button type="submit" class="btn btn-light" name="15"><img src="images/1800Tequila.jpg" alt="tequila 3" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="15"><img src="images/reposado.png" alt="tequila 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1590
                 <br />
@@ -249,7 +249,7 @@
               <td id="brandy1">
                 <span class="productName">Fundador Spanish Brandy</span>
                 <br />
-                <button type="submit" class="btn btn-light" name="16"><img src="images/fundador.jpg" alt="brandy 1" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="16"><img src="images/fundador.png" alt="brandy 1" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1018.80
                 <br />
@@ -267,7 +267,7 @@
               <td id="brandy3">
                 <span class="productName">Hennesy</span>
                 <br/>
-                <button type="submit" class="btn btn-light" name="18"><img src="images/Hennesy.jpg" alt="brandy 3" height="200px" width="200px" class="productImage"/></button>
+                <button type="submit" class="btn btn-light" name="18"><img src="images/hennesy.png" alt="brandy 3" height="200px" width="200px" class="productImage"/></button>
                 <br />
                 Price: 1980.12
                 <br />
