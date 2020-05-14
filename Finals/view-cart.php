@@ -106,39 +106,24 @@ if (isset($_SESSION['sess_id'])) {
              ?>
 
           </form>
-          <form action="cashCheckout.php" method="post">
-
-            <table align="center">
+            <table align="center" style="text-align:center;">
               <tr>
-                <th colspan="2">
+                <th>
                   <h3 class="center-text">Mode of payment</h3>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <input type="radio" id="cash" name="modePayment" value="cash" required>
-                </td>
-                <td>
-                  <label for="cash">cash</label><br>
+                  <a href="cashCheckout.php"><button class="btn btn-success"> cash </button></a>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <input type="radio" id="Card" name="modePayment" value="Card">
-                </td>
-                <td>
-                    <label for="Card">Card</label><br>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                    <button class="btn btn-success" <?php if(isset($_SESSION['disable'])){echo $_SESSION['disable']; unset($_SESSION['disable']);} ?> > Go </button>
+                  <a href="cardCheckout.php"><button class="btn btn-Warning"> Card </button></a>
                 </td>
               </tr>
             </table>
-
             </table>
-          </form>
         </tbody>
       </table>
     <!-- </form> -->
