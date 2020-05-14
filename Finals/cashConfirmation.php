@@ -9,7 +9,7 @@ if (isset($_SESSION['sess_id'])) {
   require_once('view/header-user.php');
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <h3 class="card-title">confirmation Page</h3>
+    <h3 class="card-title"> Cash Confirmation Page</h3>
     <form action="receipt.php" method="post">
       <table class="table">
         <thead>
@@ -23,7 +23,7 @@ if (isset($_SESSION['sess_id'])) {
               }
            ?>
           <!-- Content -->
-          <h5>confirmation Page</h5>
+          <h5>Cash Confirmation Page</h5>
           <button class="btn btn-success"> Go </button>
         </tbody>
       </table>

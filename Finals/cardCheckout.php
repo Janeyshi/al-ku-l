@@ -1,60 +1,64 @@
 <?php
-$servername = "localhost";
-$server_user = "root";
-$server_pass = "";
-$dbname = "alakshop";
-$con = new mysqli($servername, $server_user, $server_pass, $dbname);
-session_start();
-//to ensure guest feature only for guest
-if (isset($_SESSION['sess_id'])) {
-
+  session_start();
+  if (isset($_SESSION['sess_id'])) {
+    require_once('view/header-user.php');
+  } else {
+    require_once('view/header.php');
+  }
  ?>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style.css">
+ <h3 class="card-title">Cash Checkout Page</h3>
+  <form method="post" action="routers/card-checkout-router.php">
+       <h5>Cash Checkout Page</h5>
+    <table align="center">
+      <!-- ADDRESS -->
+      <tr>
+        <td>
+          <label>Enter your Address:</label>
+        </td>
+        <td>
+          <input type="text" name="address" required/>
+        </td>
+      </tr>
 
-<?php
-  require_once('view/header-user.php');
- ?>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <h3 class="card-title">Card Checkout Page</h3>
-    <form action="cashConfirmation.php" method="post">
-      <table class="table" align = "center">
-        <thead>
-        </thead>
-        <tbody>
-          <tr>
-            <th colspan="2">
-              <h3 class="center-text">Card Checkout Page</h3>
-            </th>
-          </tr>
-        <tr>
-          <td>
-              <label for="Card">Debit/Credit Card</label><br>
-          </td>
-          <td>
-            <label for="ccNumber">Credit Card Number</label>
-            <input type="ccNumber" name="ccNumber" id="ccNumber" required>
-          </td>
-          <td>
-            <label for="expDate">Expiration Date</label>
-            <input type="expDate" name="expDate" id="expDate" required>
-          </td>
-          <td>
-            <label for="cvv">CVV</label>
-            <input type="cvv" name="cvv" id="cvv" required>
-          </td>
-          <td>
-            <label for="address">Address</label>
-            <input type="address" name="address" id="address" required>
-          </td>
-          <td>
-            <button class="btn btn-success"> Confirm Checkout </button>
-          </td>
-        </tr>
-      </form>
-    </tbody>
-  </table>
-  <?php require_once('view/footer.php');}
-    else {
-      header("location:routers/logout.php");
-      exit();
-    }
-  ?>
+      <!-- CC NUMBER -->
+      <tr>
+        <td>
+          <label>Enter your Credit Card Number:</label>
+        </td>
+        <td>
+          <input type="text" name="creditCardNumber" required/>
+        </td>
+      </tr>
+
+      <!-- EXPIRATION OF CC -->
+      <tr>
+        <td>
+          <label>Enter the Expiration date of your Credit Card:</label>
+        </td>
+        <td>
+          <input type="text" name="expirationDate" required/>
+        </td>
+      </tr>
+
+      <!-- CVV NUMBER -->
+      <tr>
+        <td>
+          <label>Enter the CVV number of your Credit Card:</label>
+        </td>
+        <td>
+          <input type="text" name="CCV" required/>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit" class="btn btn-success" name="reg_user">Confirm Checkout</button>
+          <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+<?php require_once('view/footer.php');
+?>
