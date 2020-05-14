@@ -1,30 +1,21 @@
 <?php
-include '../databaseConnections/connect.php';
+session_start();
 
-$ctr = $_POST['ctr'];
-$convert = (int)$ctr;
-$idName = "id";
-$addressName = "address";
-$btn = "addressNamebtn";
-$id = "";
+// connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'alakshop');
 
-for($i = $convert;$i > 0; $i--){
-  $idName = $idName . $i;  //this to get row id
-  $addressName = $AddressName . $i; //this to get productQty
-  $btnName =  $btn . $i; //this btn update
-  echo 'this is a '.$i.'<br />';
-  if (isset($_POST[$i])) {
-    $id = $_POST[$idName];
-    $address = $_POST[$addressName];
-    echo $id;
-    session_start();
-  $sql = "INSERT INTO accounts(address) VALUES ('$address') where id = $id";
-  if (mysqli_query($con, $sql)) {
-      $_SESSION['message'] = '<h3 class="center-text">Address Saved!</h3>';
-  } else {
-    $_SESSION['message'] = '<h3 class="center-text">Unable to save address!</h3>';
-  }
-  mysqli_close($con);
-  header('location: ../cashConfirmation.php');
+// REGISTER USER
+if (isset($_POST['reg_user'])) {
+  // receive all input values from the form
+  $address = mysqli_real_escape_string($db, $_POST['address']);
+  $id = $_SESSION['user_id'];
+
+    // INSERT INTO DATABASE
+  	$query = "UPDATE accounts SET  address ='$address' WHERE id = '$id'";
+
+    //ONCE REGISTRATION IS SUCCESSFUL
+  	mysqli_query($db, $query);
+  	$_SESSION['successAddress'] = '<h3 class="center-text">Address Inserted</h3>';
+  	header('location: ../cashConfirmation.php');
 }
 ?>

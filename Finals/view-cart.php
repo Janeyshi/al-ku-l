@@ -106,7 +106,7 @@ if (isset($_SESSION['sess_id'])) {
              ?>
 
           </form>
-          <form action="confirmation.php" method="post">
+          <form action="cashCheckout.php" method="post">
 
             <table align="center">
               <tr>

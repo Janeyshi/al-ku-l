@@ -16,6 +16,12 @@ if (isset($_SESSION['sess_id'])) {
           <h1 class="center-text"> Hello World </h1>
         </thead>
         <tbody>
+          <?php
+              if(isset($_SESSION['successAddress'])){
+                echo $_SESSION['successAddress'];
+                unset($_SESSION['successAddress']);
+              }
+           ?>
           <!-- Content -->
           <h5>confirmation Page</h5>
           <button class="btn btn-success"> Go </button>
