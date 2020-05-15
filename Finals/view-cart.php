@@ -29,7 +29,7 @@ if (isset($_SESSION['sess_id'])) {
               // echo '<img src="'.$row[imageSrc]'" alt="rum 1" height="700px" width="700px" class="productImageBig"/>'
               $ctr = $ctr + 1;
               echo '<table align="center">
-            
+
                 <tr>
                   <td>
                     Product Name:
@@ -88,7 +88,7 @@ if (isset($_SESSION['sess_id'])) {
               }
             }else {
               echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
-              $_SESSION['disable'] = "disabled";
+              $_SESSION['disable'] = 'style="display: none;"';
             }
             $con->close();
              ?>
@@ -98,17 +98,33 @@ if (isset($_SESSION['sess_id'])) {
                 <table align="center" style="text-align:center;">
                   <tr>
                     <th>
-                      <h3 class="center-text">Mode of payment</h3>
+
+                      <h3 class="center-text" <?php
+                        if (isset($_SESSION['disable'])) {
+                          echo $_SESSION['disable'];
+
+                      }
+                      ?> >Mode of payment</h3>
                     </th>
                   </tr>
                   <tr>
                     <td>
-                      <button class="btn btn-success" name="cash"> cash </button>
+                      <button class="btn btn-success" name="cash" <?php
+                        if (isset($_SESSION['disable'])) {
+                          echo $_SESSION['disable'];
+
+                      }
+                      ?>> cash </button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <button class="btn btn-Warning" name="card"> Card </button>
+                      <button class="btn btn-Warning" name="card" <?php
+                        if (isset($_SESSION['disable'])) {
+                          echo $_SESSION['disable'];
+
+                      }
+                      ?> > Card </button>
                     </td>
                   </tr>
                 </table>
@@ -117,13 +133,10 @@ if (isset($_SESSION['sess_id'])) {
         </tbody>
       </table>
     <!-- </form> -->
-    <?php require_once('view/footer.php');}
+    <?php unset($_SESSION['disable']);
+    require_once('view/footer.php');}
       else {
         header("location:routers/logout.php");
         exit();
       }
     ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> joseBranch

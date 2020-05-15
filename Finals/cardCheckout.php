@@ -11,6 +11,16 @@
  <h3 class="card-title">Card Checkout Page</h3>
   <form method="post" action="routers/card-checkout-router.php">
        <h5>Payment Details</h5>
+       <?php
+       $id = $_SESSION['user_id'];
+       $con = mysqli_connect('localhost', 'root', '', 'alakshop');
+       $address;
+       $empty = "";
+       $result = mysqli_query($con, "SELECT address FROM accounts WHERE id =".$_SESSION['user_id']."");
+       while($row = mysqli_fetch_array($result)){
+         $address = $row['address'];
+       }
+       ?>
     <table align="center">
       <!-- ADDRESS -->
       <tr>
@@ -18,7 +28,15 @@
           <label>Enter your Address:</label>
         </td>
         <td>
-          <input type="text" name="address" required/>
+          <input type="text" name="address" value="
+          <?php
+
+          if($address == $empty){
+            echo $empty;
+          }else {
+            echo $address;
+          }
+          ?>" required/>
         </td>
       </tr>
 
