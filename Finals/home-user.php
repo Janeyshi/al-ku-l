@@ -47,7 +47,7 @@
 
               <div class="row">
                 <div class="col-lg-4 col-md-6">
-                  <div class="speaker">
+                  <div>
                     <img src="images/pic1.jpg" alt="pic ni jc" class="img-fluid" height="250px" width="250px">
                     <div class="details">
                       <h3>Juan Carlos C. Dulos</h3>
@@ -56,7 +56,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <div class="speaker">
+                  <div>
                     <img src="images/pic2.jpg" alt="pic ni liam" class="img-fluid" height="250px" width="250px">
                     <div class="details">
                       <h3>James Liam De jesus</h3>
@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <div class="speaker">
+                  <div>
                     <img src="images/pic3.jpg" alt="pic ni denise" class="img-fluid" height="250px" width="250px">
                     <div class="details">
                       <h3>Kaithelyn Jose</h3>
@@ -74,7 +74,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <div class="speaker">
+                  <div>
                     <img src="images/pic2.jpg" alt="pic ni janey" class="img-fluid" height="250px" width="250px">
                     <div class="details">
                       <h3>Janedel Ac-ac</h3>
@@ -83,11 +83,20 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <div class="speaker">
+                  <div>
                     <img src="images/pic1.jpg" alt="pic ni ben" class="img-fluid" height="250px" width="250px">
                     <div class="details">
                       <h3>Benedick Macayan</h3>
                       <p>Researcher</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div>
+                    <img src="images/team.png" alt="pic ni ben" class="img-fluid" height="250px" width="250px">
+                    <div class="details">
+                      <h3>Everyone</h3>
+                      <p>Regradless of the assigned job everyone did their part in the code as well</p>
                     </div>
                   </div>
                 </div>
