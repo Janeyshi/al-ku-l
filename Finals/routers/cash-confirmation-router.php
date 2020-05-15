@@ -6,7 +6,7 @@ $db = mysqli_connect('localhost', 'root', '', 'alakshop');
 
   $user_id = $_SESSION['user_id'];
     // SELECT INTO DATABASE
-  	$query = "SELECT INTO cart (productName, productPrice, productImg, productQty, originalPrice, user_id)
+    $query = "SELECT INTO cart (productName, productPrice, productImg, productQty, originalPrice, user_id)
     VALUES ('$productName', '$totalprice', '$productImg', '$productQty', '$productPrice', $user_id)";
 
     //ONCE REGISTRATION IS SUCCESSFUL
@@ -18,6 +18,7 @@ $db = mysqli_connect('localhost', 'root', '', 'alakshop');
       echo 'done.';
     }
     //comment the two line below to debug
-  	
-  	header('location: ../receipt.php');
+    
+    header('location: ../receipt.php');
+
 ?>

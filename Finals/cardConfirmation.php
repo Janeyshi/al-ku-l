@@ -58,7 +58,7 @@ if (isset($_SESSION['sess_id'])) {
 
               while($row = $result->fetch_assoc()){
                 $totalQty += $row["productQty"];
-                $totalPrice += $row["productPrice";
+                $totalPrice += $row["productPrice"];
               $ctr = $ctr + 1;
               
               echo '
@@ -77,10 +77,7 @@ if (isset($_SESSION['sess_id'])) {
                   </td>
                 </tr>
                 ';
-              // <td align="left"><strong>Payment Method: </strong>'.$row["modeOfPayment"].'</td>
-              // <td align="left"><strong>Shipping Address: </strong>'.$row["address"].' </td>
-              //pota kanta ni ryne ah
-
+              
               }
             }else {
               echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
@@ -93,7 +90,8 @@ if (isset($_SESSION['sess_id'])) {
                
                 <td align="right"><?php echo $totalQty ?></td>
                 
-                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>                                 
+                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td> 
+             </tr>                                   
              <tr>
               <td><strong>Payment Method: </strong> <?php echo$mod ?></td></th>
             </tr>
