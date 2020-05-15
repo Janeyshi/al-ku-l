@@ -123,3 +123,7 @@ if (isset($_SESSION['sess_id'])) {
         exit();
       }
     ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> joseBranch

@@ -17,7 +17,7 @@ if (isset($_SESSION['sess_id'])) {
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Cash Confirm Checkout </h3>
-    <form action="routers/card-confirmation-router.php" method="post">
+    <form action="routers/cash-confirmation-router.php" method="post">
       <table class="table">
 
         <tbody>
@@ -59,7 +59,7 @@ if (isset($_SESSION['sess_id'])) {
               while($row = $result->fetch_assoc()){
                 $totalQty += $row["productQty"];
                 $totalPrice += $row["productPrice"];
-              $ctr = $ctr + 1;
+                $ctr = $ctr + 1;
               
               echo '
                 <tr style="border: 1px solid black;">
@@ -76,10 +76,7 @@ if (isset($_SESSION['sess_id'])) {
                     <input type="hidden" name="origPrice'.$ctr.'" value="'.$row["originalPrice"].'">
                   </td>
                 </tr>
-                ';
-              // <td align="left"><strong>Payment Method: </strong>'.$row["modeOfPayment"].'</td>
-              // <td align="left"><strong>Shipping Address: </strong>'.$row["address"].' </td>
-              //pota kanta ni ryne ah
+                ';              
 
               }
             }else {

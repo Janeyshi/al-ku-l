@@ -77,7 +77,7 @@ if (isset($_SESSION['sess_id'])) {
                   </td>
                 </tr>
                 ';
-              
+
 
               }
             }else {
@@ -89,9 +89,17 @@ if (isset($_SESSION['sess_id'])) {
              <tr style="border: 1px solid black;">
                 <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>
 
+
+                <td align="right"><?php echo $totalQty ?></td>
+
+                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
+             </tr>
+
+
                 <td align="right"><?php echo $totalQty; ?></td>
 
                 <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
+
              <tr>
               <td><strong>Payment Method: </strong> <?php echo$mod; ?></td></th>
             </tr>
