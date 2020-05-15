@@ -29,6 +29,7 @@ if (isset($_SESSION['sess_id'])) {
               // echo '<img src="'.$row[imageSrc]'" alt="rum 1" height="700px" width="700px" class="productImageBig"/>'
               $ctr = $ctr + 1;
               echo '<table align="center">
+            
                 <tr>
                   <td>
                     Product Name:
@@ -122,4 +123,3 @@ if (isset($_SESSION['sess_id'])) {
         exit();
       }
     ?>
->>>>>>> master
