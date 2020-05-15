@@ -1,11 +1,13 @@
 <?php
 session_start();
 
+
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'alakshop');
 
+echo "Hi";
 // REGISTER USER
-if (isset($_POST['reg_user'])) {
+if (isset($_POST['reg_user'])) { //why do you need to insert it again in the db??? its in the thee db table cart na - JC
   // receive all input values from the form
 
   $productName = mysqli_real_escape_string($db, $_POST['productName']);
@@ -21,11 +23,12 @@ if (isset($_POST['reg_user'])) {
     //ONCE REGISTRATION IS SUCCESSFUL
     $result = mysqli_query($db, $query);
     if ( false===$result ) {
-      printf("error: %s\n", mysqli_error($db));
+      echo "error: %s\n", mysqli_error($db);
     }
     else {
       echo 'done.';
     }
+
     //comment the two line below to debug
   	$_SESSION['insert_success'] = '<h3 class="center-text">Added to cart</h3>';
   	header('location: ../receipt.php');

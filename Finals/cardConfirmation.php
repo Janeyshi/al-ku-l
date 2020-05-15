@@ -23,7 +23,7 @@ if (isset($_SESSION['sess_id'])) {
         <tbody>
           <?php
             if(isset($_SESSION['message'])){
-              echo $_SESSION['message']; //rock n roll
+              echo $_SESSION['message'];
               unset($_SESSION['message']);
             } else if(isset($_SESSION['message'])){
               echo $_SESSION['message'];
@@ -36,7 +36,7 @@ if (isset($_SESSION['sess_id'])) {
               $sql2 = "SELECT * FROM accounts where id = '$user_id'"; //accounts
               $result2 = $con->query($sql2);
               while($row2 = $result2->fetch_assoc()){
-                $address= $row2["address"]; //pota eto lang pala kulang
+                $address= $row2["address"];
                 $mod = $row2["modeOfPayment"];
               }
 
@@ -47,10 +47,10 @@ if (isset($_SESSION['sess_id'])) {
               <th style="text-align:right;" width="2%">Quantity</th>
               <th style="text-align:right;" width="20%">Price</th>
             </tr>
-            
+
             <?php
-            
-            
+
+
             $sql = "SELECT * FROM cart where user_id = '$user_id'";
             $result = $con->query($sql);
             $ctr = 0;
@@ -58,9 +58,9 @@ if (isset($_SESSION['sess_id'])) {
 
               while($row = $result->fetch_assoc()){
                 $totalQty += $row["productQty"];
-                $totalPrice += $row["productPrice";
+                $totalPrice += $row["productPrice"];
               $ctr = $ctr + 1;
-              
+
               echo '
                 <tr style="border: 1px solid black;">
                   <td style="border: 1px solid black;">
@@ -77,9 +77,7 @@ if (isset($_SESSION['sess_id'])) {
                   </td>
                 </tr>
                 ';
-              // <td align="left"><strong>Payment Method: </strong>'.$row["modeOfPayment"].'</td>
-              // <td align="left"><strong>Shipping Address: </strong>'.$row["address"].' </td>
-              //pota kanta ni ryne ah
+              
 
               }
             }else {
@@ -90,15 +88,15 @@ if (isset($_SESSION['sess_id'])) {
              ?>
              <tr style="border: 1px solid black;">
                 <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>
-               
-                <td align="right"><?php echo $totalQty ?></td>
-                
-                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>                                 
+
+                <td align="right"><?php echo $totalQty; ?></td>
+
+                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
              <tr>
-              <td><strong>Payment Method: </strong> <?php echo$mod ?></td></th>
+              <td><strong>Payment Method: </strong> <?php echo$mod; ?></td></th>
             </tr>
             <tr>
-              <td><strong>Shipping Address: </strong><?php echo $address ?></td>
+              <td><strong>Shipping Address: </strong><?php echo $address; ?></td>
             </tr>
           </table>
           <br>
