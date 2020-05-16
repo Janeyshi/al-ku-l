@@ -127,6 +127,8 @@
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
+              } else {
+                header("location: browse-product.php");
               }
             ?>
             <!-- Show the picked item -->
