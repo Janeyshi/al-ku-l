@@ -20,12 +20,7 @@
               <div class="row">
                 <div class="col-lg-6">
                   <h2>About <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i></h2>
-                  <p class="about">Founded by a group of alcoholic enthusiast from the Philippines, <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i> is an
-                    eCommerce platform that is dedicated to sell the finest alcoholic beverages available around
-                    the globe. Every gathering sometimes lack a dose of entertainment. That is why we aim to further
-                    enhance the gathering by making a variety of the finest alcoholic beverages in the planet available
-                    to anyone. Remember, the fun begins when you get a dose of this.</p>
-                </div>
+                  <p class="about">Founded bDDDDDDDDD
                 <div class="col-lg-6">
                   <h2><strong>Mission-Vision</strong></h2>
                   <p class="about"><strong>Mission:</strong><br />
