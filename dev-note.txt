@@ -24,15 +24,16 @@ Contributions // need to be edited
 
 Dick - Login and router.php and research  vision-mission
 Janey - Register and register-router.Php about us content
+Denise - Receipt, confirmation, Design
+Liam - login, Browse, Checkout
+JC - Single product page, search, view cart
 
 
 
 
 
 
-// modal ng research
-// add to cart quantity
-//Password checker anad hashing
+//Password checker anad hashing for password in db
 
 
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php
