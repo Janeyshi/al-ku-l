@@ -24,7 +24,7 @@
                     <br /><br />
                     <strong>Vision:</strong><br />
                     To provide the world with the best alcohol at a good price. We aim to be the <strong>best solution </strong>
-                    to any kinds of customer through our supplies of alcohol to meet all the needs.
+                    to any kinds of sdadassdaddaadasaaer through our supplies of alcohol to meet all the needs.
                   </p>
                 </div>
               </div>
