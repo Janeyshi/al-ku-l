@@ -4,7 +4,7 @@ include 'databaseConnections/connect.php';
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $username = mysqli_real_escape_string($con, $_POST['username']);
+  $username = mysqli_real_escape_string($con, $_POST['username']); 
   $password = mysqli_real_escape_string($con, $_POST['password']);
   $email = mysqli_real_escape_string($con, $_POST['email']);
   $firstName = mysqli_real_escape_string($con, $_POST['firstName']);
