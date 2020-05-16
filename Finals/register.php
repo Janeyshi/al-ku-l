@@ -25,7 +25,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Username</label>
         </td>
         <td>
-          <input type="text" name="username">
+          <input type="text" name="username" required>
         </td>
       </tr>
 
@@ -35,7 +35,7 @@ if (isset($_SESSION['sess_id'])) {
            <label>Password</label>
         </td>
         <td>
-          <input type="password" name="password">
+          <input type="password" name="password" required>
         </td>
       </tr>
 
@@ -45,7 +45,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Email</label>
         </td>
         <td>
-           <input type="email" name="email">
+           <input type="email" name="email" required>
         </td>
       </tr>
 
@@ -55,7 +55,7 @@ if (isset($_SESSION['sess_id'])) {
             <label>First Name</label>
         </td>
         <td>
-            <input type="text" name="firstName">
+            <input type="text" name="firstName" required>
         </td>
       </tr>
 
@@ -65,7 +65,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Middle Name</label>
         </td>
         <td>
-          <input type="text" name="middleName">
+          <input type="text" name="middleName" required>
         </td>
       </tr>
 
@@ -75,7 +75,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Last Name</label>
         </td>
         <td>
-          <input type="text" name="lastName">
+          <input type="text" name="lastName" required>
         </td>
       </tr>
 
@@ -85,7 +85,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Suffix</label>
         </td>
         <td>
-          <input type="text" name="suffix">
+          <input type="text" name="suffix" required>
         </td>
       </tr>
       <tr>

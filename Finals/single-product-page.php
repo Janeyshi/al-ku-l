@@ -1,6 +1,6 @@
 <?php
-  session_start();
-  include("model/product.php");
+    include("model/product.php");
+    include 'databaseConnections/connect.php';
   if (isset($_SESSION['sess_id'])) {
     require_once('view/header-user.php');
   } else {
@@ -19,7 +19,7 @@
               $prod = new Product();
 
               //connect to db
-              $con = mysqli_connect('localhost', 'root', '', 'alakshop');
+
 
               //rum datas
               if (isset($_POST['1'])) {

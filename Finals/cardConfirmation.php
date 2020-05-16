@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$server_user = "root";
-$server_pass = "";
-$dbname = "alakshop";
-$con = new mysqli($servername, $server_user, $server_pass, $dbname);
-session_start();
+include 'databaseConnections/connect.php';
 $user_id = $_SESSION['user_id'];
 if (isset($_SESSION['sess_id'])) {
   $totalQty = 0;
@@ -17,7 +12,7 @@ if (isset($_SESSION['sess_id'])) {
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Card Confirm Checkout </h3>
-    <form action="routers/card-confirmation-router.php" method="post">
+    <form action="receipt.php" method="post">
       <table class="table">
 
         <tbody>

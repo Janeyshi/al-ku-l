@@ -9,27 +9,31 @@
       <table class="table">
         <thead>
           <h1 class="center-text"> Hello <?php echo $_SESSION['user_name'];?> </h1>
+          <br /><br /><br />
         </thead>
         <tbody>
           <!-- Content -->
-          <h5>Home Page</h5>
           <section id="about">
             <div class="container">
               <div class="row">
                 <div class="col-lg-6">
                   <h2>About <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i></h2>
-                  <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-                    accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-                    est ut optio sequi unde.</p>
+                  <p class="about">Founded by a group of alcoholic enthusiast from the Philippines, <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i> is an
+                    eCommerce platform that is dedicated to sell the finest alcoholic beverages available around
+                    the globe. Every gathering sometimes lack a dose of entertainment. That is why we aim to further
+                    enhance the gathering by making a variety of the finest alcoholic beverages in the planet available
+                    to anyone. Remember, the fun begins when you get a dose of this.</p>
                 </div>
-                <div class="col-lg-3">
-                  <h3>Core values</h3>
-                  <p>~Just get random ecommerce core value~</p>
-                </div>
-                <div class="col-lg-3">
-                  <h3>Location</h3>
-                  <p>~Put a random location here/or just put school address~
-                    <br>~Opening time put here~</p>
+                <div class="col-lg-6">
+                  <h3>Mission-Vision</h3>
+                  <p class="about"><strong>Mission:</strong><br />
+                    <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i> has one true mission:
+                    "To sell different alcohol of excellence and difference"
+                    <br /><br />
+                    <strong>Vision:</strong><br />
+                    To provide the world with the best alcohol at a good price. We aim to be the <strong>best solution </strong>
+                    to any kinds of customer through our supplies of alcohol to meet all the needs.
+                  </p>
                 </div>
               </div>
             </div>
@@ -48,7 +52,7 @@
               <div class="row">
                 <div class="col-lg-4 col-md-6">
                   <div>
-                    <img src="images/pic1.jpg" alt="pic ni jc" class="img-fluid" height="250px" width="250px">
+                    <img src="images/team/jc.jpg" alt="pic ni jc"  height="250px" width="250px">
                     <div class="details">
                       <h3>Juan Carlos C. Dulos</h3>
                       <p>Back and Front end Developer</p>
@@ -57,7 +61,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                   <div>
-                    <img src="images/pic2.jpg" alt="pic ni liam" class="img-fluid" height="250px" width="250px">
+                    <img src="images/team/liam.jpg" alt="pic ni liam"  height="250px" width="250px">
                     <div class="details">
                       <h3>James Liam De jesus</h3>
                       <p>Back and Front end Developer</p>
@@ -66,7 +70,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                   <div>
-                    <img src="images/pic3.jpg" alt="pic ni denise" class="img-fluid" height="250px" width="250px">
+                    <img src="images/team/denise.jpg" alt="pic ni denise"  height="250px" width="250px">
                     <div class="details">
                       <h3>Kaithelyn Jose</h3>
                       <p>Back and Front end Developer</p>
@@ -75,7 +79,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                   <div>
-                    <img src="images/pic2.jpg" alt="pic ni janey" class="img-fluid" height="250px" width="250px">
+                    <img src="images/team/janey.jpg" alt="pic ni janey"  height="250px" width="250px">
                     <div class="details">
                       <h3>Janedel Ac-ac</h3>
                       <p>Content Manager</p>
@@ -84,7 +88,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                   <div>
-                    <img src="images/pic1.jpg" alt="pic ni ben" class="img-fluid" height="250px" width="250px">
+                    <img src="images/team/ben.jpg" alt="pic ni ben"  height="250px" width="250px">
                     <div class="details">
                       <h3>Benedick Macayan</h3>
                       <p>Researcher</p>
@@ -93,10 +97,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                   <div>
-                    <img src="images/team.png" alt="pic ni ben" class="img-fluid" height="250px" width="250px">
+                    <img src="images/team.png" alt="pic ni ben"  height="250px" width="250px">
                     <div class="details">
                       <h3>Everyone</h3>
-                      <p>Regradless of the assigned job everyone did their part in the code as well</p>
+                      <p>Regradless of the assigned job everyone contributed in the code as well.</p>
                     </div>
                   </div>
                 </div>

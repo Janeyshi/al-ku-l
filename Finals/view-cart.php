@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$server_user = "root";
-$server_pass = "";
-$dbname = "alakshop";
-$con = new mysqli($servername, $server_user, $server_pass, $dbname);
-session_start();
+include 'databaseConnections/connect.php';
 //to ensure guest feature only for guest
 if (isset($_SESSION['sess_id'])) {
 
