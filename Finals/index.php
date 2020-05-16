@@ -15,12 +15,7 @@
         </thead>
         <tbody>
           <!-- Content -->
-          <section id="about">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <h2>About <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i></h2>
-                  <p class="about">Founded bDDDDDDDDD
+          <section id="about">asdasdasdadadadadd bDDDDDDDDD
                 <div class="col-lg-6">
                   <h2><strong>Mission-Vision</strong></h2>
                   <p class="about"><strong>Mission:</strong><br />
