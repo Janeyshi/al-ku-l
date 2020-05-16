@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - index.php is our home page
 - the user can browse the product page even without logging in
 - the user can add to cart even without logging in
@@ -6,3 +7,28 @@
 - when clicking the profile page it will redirect the user to login page if not logged in
 - inside the profile page, info about the user + Purchase history(tentative) since not required
 - reciept page will be after confiming the transaction 
+=======
+Guest User  can do
+- Home page which is index.php about us stuff
+- Product page can browse only no add to cart button
+- Login
+
+Logged in User can do
+- Profile Page where user info are available
+- Product page where the user can search, browse, and the add to cart button is part
+- log out button where it will redirect the user to index.php
+- view cart page where the user can view his/her Cart
+- after in view cart cofirm Purchase button is there to redirect the user to confirmation.php
+- after putting the details needed in confirmation page it will redirect to receipt.php the cart will be empty
+
+- import the sql file alakshop.sql to your mysql localhost in a db named alakshop
+- add to cart will be inserting to cart table in mysql db
+- view cart will retrieve all cart data in cart table in mysql db
+- order will have 2 orderconfirmation page 1 for cash on delivery and 1 for card
+- at the same time order will have 2 table in the db one for order-using-card and one for order-using-cash
+
+- make a .htaccess file and put this code "ErrorDocument 404 /al-ku-l/Finals/error-404.php"
+/al-ku-l/Finals/error-404.php will depend on your root directory make sure to put .htaccess in your root which is htdocs in xampp
+
+- to check copy this link: http://localhost/al-ku-l/Finals/index.php
+>>>>>>> 5a57bc46dcc7e143027f9052ee7b48ce147bebff

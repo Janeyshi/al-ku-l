@@ -12,25 +12,6 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-<<<<<<< HEAD
-  </head>
-  <body>
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div href="index.php" class="navbar-brand">ALAK SHOP</div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item <?php if(isActive('order-form.php')) echo 'active'; ?>">
-            <a class="nav-link" href="order-form.php">Products</a>
-          </li>
-          <li class="nav-item <?php if(isActive('price-list.php')) echo 'active'; ?>">
-            <a class="nav-link" href="price-list.php">Profile</a>
-          </li>
-          <li class="nav-item <?php if(isActive('price-list.php')) echo 'active'; ?>">
-            <a class="nav-link" href="price-list.php">Log in</a>
-          </li>
-          <li class="nav-item <?php if(isActive('price-list.php')) echo 'active'; ?>">
-            <a class="nav-link" href="price-list.php">View Cart</a>
-=======
       <script src="https://kit.fontawesome.com/f7015e5bbd.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -44,9 +25,14 @@
           <li class="nav-item <?php if(isActive('browse-product.php')) echo 'active'; ?>">
             <a class="nav-link" href="browse-product.php">Products <i class="fas fa-wine-bottle"></i></a>
           </li>
-          <li class="nav-item <?php if(isActive('login.php')) echo 'active'; ?>">
-            <a class="nav-link" href="login.php">Log in <i class="fas fa-id-card-alt"></i></a>
->>>>>>> 5a57bc46dcc7e143027f9052ee7b48ce147bebff
+          <li class="nav-item <?php if(isActive('profile.php')) echo 'active'; ?>">
+            <a class="nav-link" href="profile.php">Profile <i class="fas fa-users"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="routers/logout.php">Log out <i class="fas fa-id-card-alt"></i></a>
+          </li>
+          <li class="nav-item <?php if(isActive('view-cart.php')) echo 'active'; ?>">
+            <a class="nav-link" href="view-cart.php">View Cart <i class="fas fa-shopping-cart"></i></a>
           </li>
         </ul>
       </div>
