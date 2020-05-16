@@ -25,7 +25,7 @@
                     to anyone. Remember, the fun begins when you get a dose of this.</p>
                 </div>
                 <div class="col-lg-6">
-                  <h3>Mission-Vision</h3>
+                  <h2><strong>Mission-Vision</strong></h2>
                   <p class="about"><strong>Mission:</strong><br />
                     <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i> has one true mission:
                     "To sell different alcohol of excellence and difference"
