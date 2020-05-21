@@ -20,7 +20,6 @@
 
               //connect to db
 
-
               //rum datas
               if (isset($_POST['1'])) {
                   $result = mysqli_query($con, "SELECT * FROM products WHERE id = 1");

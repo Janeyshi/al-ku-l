@@ -8,6 +8,7 @@
     <h3 class="card-title">Profile Page <i class="fas fa-users"></i></h3>
     <form action="process-order.php" method="post">
       <table class="table">
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
         <thead>
         </thead>
         <tbody>
@@ -15,7 +16,7 @@
               <?php
                 $result = mysqli_query($con, "SELECT * FROM accounts WHERE id =".$_SESSION['user_id']."");
                 while($row = mysqli_fetch_array($result)){
-                  echo '<table align="center" cellspacing="3" cellpadding="3">';
+                  echo '<table cellspacing="10" cellpadding="10" border="1px solid black">';
                   echo '  <tr>';
                   echo '    <th>';
                   echo '      Username: ';
