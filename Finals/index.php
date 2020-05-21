@@ -15,7 +15,7 @@
         </thead>
         <tbody>
           <!-- Content -->
-          <section id="about">asdasdasdadadadadd bDDDDDDDDD
+          <section id="about">
                 <div class="col-lg-6">
                   <h2><strong>Mission-Vision</strong></h2>
                   <p class="about"><strong>Mission:</strong><br />

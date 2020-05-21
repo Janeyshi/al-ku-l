@@ -12,6 +12,7 @@
       <table class="table">
         <thead>
           <h1 class="center-text"> The Alak Shop <i class="fas fa-cocktail"></i></h1>
+          <div class="navbar navbar-expand-lg navbar-dark bg-dark"></div>
         </thead>
         <tbody>
           <!-- Content -->
@@ -139,7 +140,7 @@
               <td id="rum1">
                 <span class="productName"><?php echo $prod->productName;?></span>
                 <br />
-                <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="400px" width="400px" class="productImageBig"/>
+                <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="400px" width="400px" class="productImage"/>
                 <br /><br /><br />
                 <p class="productDescription">
                   <?php echo $prod->productDesc;?>
