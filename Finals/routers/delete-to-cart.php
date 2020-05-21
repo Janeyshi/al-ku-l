@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $db = mysqli_connect('localhost', 'root', '', 'alakshop');
 
 $user_id = $_SESSION['user_id'];

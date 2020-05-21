@@ -77,11 +77,8 @@ if (isset($_SESSION['sess_id'])) {
                   </td>
                 </tr>
                 ';
-              
-<<<<<<< HEAD
-=======
 
->>>>>>> 275a5d80e46548f049508cf819532bc262f4d48a
+
               }
             }else {
               echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
@@ -91,18 +88,18 @@ if (isset($_SESSION['sess_id'])) {
              ?>
              <tr style="border: 1px solid black;">
                 <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>
-<<<<<<< HEAD
-               
+
+
                 <td align="right"><?php echo $totalQty ?></td>
-                
-                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td> 
-             </tr>                                   
-=======
+
+                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
+             </tr>
+
 
                 <td align="right"><?php echo $totalQty; ?></td>
 
                 <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
->>>>>>> 275a5d80e46548f049508cf819532bc262f4d48a
+
              <tr>
               <td><strong>Payment Method: </strong> <?php echo$mod; ?></td></th>
             </tr>
