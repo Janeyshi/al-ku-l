@@ -1,7 +1,4 @@
-.center-text{
-    text-align: center;
-    color: red;
-}
+
 
 .productTable {
   display: table;
@@ -51,3 +48,12 @@
   align-self: center;
   align-content: center;
 }
+p{
+  font-size: 20px;
+}
+.about{
+  font-size: 18px;
+  text-align: justify;
+}
+
+/* BUTTON */
