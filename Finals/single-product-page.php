@@ -139,7 +139,7 @@
               <td id="rum1">
                 <span class="productName"><?php echo $prod->productName;?></span>
                 <br />
-                <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="700px" width="700px" class="productImageBig"/>
+                <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="400px" width="400px" class="productImageBig"/>
                 <br /><br /><br />
                 <p class="productDescription">
                   <?php echo $prod->productDesc;?>
