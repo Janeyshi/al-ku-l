@@ -162,7 +162,7 @@
         <br />
         <center>
         <div>
-          Quantity: <input type="number" name="productQty"  min="0" required/>
+          Quantity: <input type="number" name="productQty"  min="1" required/>
           <br /><br />
           <button type="submit" value="Add to Cart" class="btn btn-danger" name="reg_user"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
           <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
