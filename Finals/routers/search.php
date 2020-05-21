@@ -28,9 +28,11 @@
               $product_name = $row['name'];
               $product_img = $row['imgSrc'];
               echo '<center>
+              <br/><br/><br/>
               <img src="../'.$product_img.'" alt="error 404" height="400px" width="400px" />
               </center>
               <input type="hidden" name="test" value = '.$product_id.'>
+              <br/>
               <center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> '.$product_name.' </button></center>
               <br />';
             }

@@ -45,6 +45,8 @@
       background-color: #dddfd4;
       color: white;
       transform: rotateY(180deg);
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .glow {
@@ -126,8 +128,8 @@
                       </div>
                       <div class="flip-card-back">
                         <br /><br />
-                        <h3 class="glow" style="font-size: 24px;">Juan Carlos C. Dulos</h3>
-                        <br /><br />
+                        <h3 class="glow" style="font-size: 22px;">Juan Carlos C. Dulos</h3>
+                        <br />
                         <p style="color:black;">Back and Front end Developer</p>
                         <p style="color:black;">"I LOVE JAVA"</p>
                       </div>
@@ -161,9 +163,9 @@
                       <div class="flip-card-back">
                         <br /><br />
                         <h3 class="glow" style="font-size: 24px;">Kaithelyn Jose</h3>
-                        <br /><br />
+                        <br />
                         <p style="color:black;">Back and Front end Developer</p>
-                        <p style="color:black;">"Put Denise Quote here"</p>
+                        <p style="color:black;font-size: 14px;">"Stop whatever you are doing. we need to shop"</p>
                       </div>
                     </div>
                   </div>
@@ -182,7 +184,7 @@
                         <h3 class="glow" style="font-size: 24px;">Janedel Ac-ac</h3>
                         <br /><br />
                         <p style="color:black;">Content Manager</p>
-                        <p style="color:black;">"I LOVE KIDS"</p>
+                        <p style="color:black;">"An alcohol a day keeps the ulcer away"</p>
                       </div>
                     </div>
                   </div>
@@ -212,8 +214,8 @@
                         <img src="images/team.png" alt="pic ni ben"  height="250px" width="250px">
                       </div>
                       <div class="flip-card-back">
-                        <br /><br /><br />
-                        <h1 class="glow" style="font-size: 18px;">Everyone</h1>
+                        <br /><br />
+                        <h1 class="glow" style="font-size: 22px;">Everyone</h1>
                         <p style="color:black;">Regradless of the assigned job everyone contributed in the code as well.</p>
                       </div>
                     </div>
