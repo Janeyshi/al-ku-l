@@ -79,6 +79,7 @@
         </thead>
         <tbody>
           <!-- Content -->
+<<<<<<< HEAD
           <section id="about">
             <div class="container">
               <div class="row">
@@ -94,6 +95,10 @@
 
                 </div>
                 <div class="col-lg-4" style="border-style: solid; box-shadow: 10px 10px 5px grey;">
+=======
+          <section id="about">asdasdasdadadadadd bDDDDDDDDD
+                <div class="col-lg-6">
+>>>>>>> liam-branch
                   <h2><strong>Mission-Vision</strong></h2>
                   <p class="about"><strong>Mission:</strong><br />
                     <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i> has one true mission:
@@ -101,7 +106,7 @@
                     <br /><br />
                     <strong>Vision:</strong><br />
                     To provide the world with the best alcohol at a good price. We aim to be the <strong>best solution </strong>
-                    to any kinds of customer through our supplies of alcohol to meet all the needs.
+                    to any kinds of sdadassdaddaadasaaer through our supplies of alcohol to meet all the needs.
                   </p>
                 </div>
               </div>
