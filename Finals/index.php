@@ -79,7 +79,6 @@
         </thead>
         <tbody>
           <!-- Content -->
-<<<<<<< HEAD
           <section id="about">
             <div class="container">
               <div class="row">
@@ -95,10 +94,6 @@
 
                 </div>
                 <div class="col-lg-4" style="border-style: solid; box-shadow: 10px 10px 5px grey;">
-=======
-          <section id="about">asdasdasdadadadadd bDDDDDDDDD
-                <div class="col-lg-6">
->>>>>>> liam-branch
                   <h2><strong>Mission-Vision</strong></h2>
                   <p class="about"><strong>Mission:</strong><br />
                     <strong>THE ALAK SHOP </strong><i class="fas fa-cocktail"></i> has one true mission:
@@ -226,7 +221,6 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
