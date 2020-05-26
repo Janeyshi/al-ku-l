@@ -15,9 +15,15 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO cart (productName, productPrice, productImg, productQty, originalPrice, user_id)
     VALUES ('$productName', '$totalprice', '$productImg', '$productQty', '$productPrice', $user_id)";
 
+    $query = "INSERT INTO cart (productName, productPrice, productImg, productQty, originalPrice, user_id)
+    VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $con->prepare($query);
+    $stmt->bind_param("sdsidi",$productName, $totalprice, $productImg, $productQty, $productPrice, $user_id);
+    $result = $stmt->execute();
+
     //ONCE REGISTRATION IS SUCCESSFUL
-    $result = mysqli_query($con, $query);
     if ( false===$result ) {
+      echo "false";
       printf("error: %s\n", mysqli_error($db));
     }
     else {

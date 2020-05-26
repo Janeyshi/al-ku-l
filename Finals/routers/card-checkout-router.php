@@ -9,12 +9,24 @@ if (isset($_POST['reg_user'])) {
   $expirationDate = mysqli_real_escape_string($con, $_POST['expirationDate']);
   $CCV = mysqli_real_escape_string($con, $_POST['CCV']);
   $id = $_SESSION['user_id'];
+  $currentDate = date("m/d/Y");
 
-    // INSERT INTO DATABASE
-    $query = "UPDATE accounts SET address ='$address', creditCardNumber = '$creditCardNumber', expirationDate = '$expirationDate', CCV = '$CCV'  WHERE id = '$id'";
-    //ONCE REGISTRATION IS SUCCESSFUL
-  	mysqli_query($con, $query);
+  $date1 = new DateTime($expirationDate);
+  $date2 = new DateTime($currentDate);
+
+
+  if ($date1 < $date2) {
+    echo 'Card is expired...';
+    $_SESSION['expired'] = '<h3 class="center-text">Card is expired</h3>';
+  	header('location: ../cardCheckout.php');
+  } else {
+    echo 'valid';
+    $query = "UPDATE accounts SET address = ?, creditCardNumber = ?, expirationDate = ?, CCV = ?  WHERE id = ?";
+    $stmt = $con->prepare($query);
+    $stmt->bind_param("ssssi", $address, $creditCardNumber, $expirationDate, $CCV, $id);
+    $stmt->execute();
   	$_SESSION['successAddress'] = '<h3 class="center-text">Information Inserted</h3>';
   	header('location: ../cardConfirmation.php');
+  }
 }
 ?>

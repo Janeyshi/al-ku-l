@@ -8,7 +8,10 @@ if (isset($_POST['cash'])) {
     $id = $_SESSION['user_id'];
 
     // INSERT INTO DATABASE
-    $query = "UPDATE accounts SET  modeOfPayment ='$mod' WHERE id = '$id'";
+    $query = "UPDATE accounts SET  modeOfPayment = ? WHERE id = ?";
+    $stmt = $con->prepare($query);
+    $stmt->bind_param("si", $mod, $id);
+    $stmt->execute();
 
     //ONCE REGISTRATION IS SUCCESSFUL
     mysqli_query($con, $query);
@@ -18,7 +21,10 @@ if (isset($_POST['cash'])) {
   $id = $_SESSION['user_id'];
 
   // INSERT INTO DATABASE
-  $query = "UPDATE accounts SET  modeOfPayment ='$mod' WHERE id = '$id'";
+  $query = "UPDATE accounts SET  modeOfPayment = ? WHERE id = ?";
+  $stmt = $con->prepare($query);
+  $stmt->bind_param("si", $mod, $id);
+  $stmt->execute();
 
   //ONCE REGISTRATION IS SUCCESSFUL
   mysqli_query($con, $query);

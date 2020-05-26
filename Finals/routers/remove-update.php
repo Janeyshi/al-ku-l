@@ -38,22 +38,13 @@ for($i = $convert;$i > 0; $i--){
     echo $id;
     echo $origP;
     echo $UpdatedPrice;
-    // session_start();
-    $sql = "UPDATE cart SET productQty='$qty', productPrice ='$UpdatedPrice' WHERE id = '$id' and user_id = '$user_id'"; //MALI SQL KO RAW
-    if (mysqli_query($con, $sql)) {
-        $_SESSION['message'] = '<h3 class="center-text">Item Updated from Cart</h3>';
-    } else {
-      $_SESSION['message'] = '<h3 class="center-text">Unable to Update item from Cart ' . mysqli_error($con).'</h3>';
-    }
+    $query = "UPDATE cart SET productQty=?, productPrice =? WHERE id = ? and user_id = ?";
+    $stmt = $con->prepare($query);
+    $stmt->bind_param("idii", $qty, $UpdatedPrice, $id, $user_id);
+    $stmt->execute();
+    $_SESSION['message'] = '<h3 class="center-text">Item Updated from Cart</h3>';
     mysqli_close($con);
     header('location: ../view-cart.php');
   }
 }
-
-
-
-
-
-
-
  ?>

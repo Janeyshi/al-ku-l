@@ -9,12 +9,14 @@ if (isset($_POST['reg_user'])) {
   $address = mysqli_real_escape_string($con, $_POST['address']);
   $id = $_SESSION['user_id'];
 
-    // INSERT INTO DATABASE
-  	$query = "UPDATE accounts SET  address ='$address' WHERE id = '$id'";
+  //prepared statement
+  $query = "UPDATE accounts SET  address = ? WHERE id = ?";
+  $stmt = $con->prepare($query);
+  $stmt->bind_param("si", $address, $id);
+  $stmt->execute();
 
-    //ONCE REGISTRATION IS SUCCESSFUL
-  	mysqli_query($con, $query);
-  	$_SESSION['successAddress'] = '<h3 class="center-text">Address Inserted</h3>';
-  	header('location: ../cashConfirmation.php');
+  //ONCE REGISTRATION IS SUCCESSFUL
+	$_SESSION['successAddress'] = '<h3 class="center-text">Address Inserted</h3>';
+	header('location: ../cashConfirmation.php');
 }
 ?>

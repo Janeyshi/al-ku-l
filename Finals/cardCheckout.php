@@ -12,6 +12,10 @@
   <form method="post" action="routers/card-checkout-router.php">
        <h5>Payment Details</h5>
        <?php
+       if(isset($_SESSION['expired'])){
+         echo $_SESSION['expired'];
+         unset($_SESSION['expired']);
+       }
        $id = $_SESSION['user_id'];
        $address;
        $empty = "";
@@ -64,7 +68,7 @@
           <label>Enter the Expiration date of your Credit Card:</label>
         </td>
         <td>
-          <input type="text" name="expirationDate" value="<?php
+          <input type="date" name="expirationDate" value="<?php
 
           if($expirationDate == $empty){
             echo $empty;
