@@ -1,23 +1,37 @@
 <?php
 //to ensure guest feature only for guest
+session_start();
 if (isset($_SESSION['sess_id'])) {
   header("location:browse-products-user.php");
   exit();
 } else {
  ?>
-
-<?php include('routers/register-router.php') ?>
-
 <?php
   require_once('view/header.php');
+
  ?>
 
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
  <link rel="stylesheet" type="text/css" href="CSS/style.css">
- <h3 class="card-title">Login Page</h3>
+ <h3 class="card-title">Register Page</h3>
 
-  <form method="post" action="register.php">
+  <form method="post" action="routers/register-router.php">
+    <?php
 
+    if(isset($_SESSION['exist'])){
+      echo $_SESSION['exist'];
+      unset($_SESSION['exist']);
+    } else if(isset($_SESSION['upper'])){
+        echo $_SESSION['upper'];
+        unset($_SESSION['upper']);
+      } else if(isset($_SESSION['lower'])){
+          echo $_SESSION['lower'];
+          unset($_SESSION['lower']);
+        } else if(isset($_SESSION['number'])){
+            echo $_SESSION['number'];
+            unset($_SESSION['number']);
+          }
+   ?>
     <table align="center">
       <!-- USERNAME -->
       <tr>
@@ -91,6 +105,15 @@ if (isset($_SESSION['sess_id'])) {
       <tr>
         <td colspan="2">
           <button type="submit" class="btn btn-success" name="reg_user">Register</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p style="color:red; font-size:12px">
+            note: Username and Email must not be registered in the system to register.
+            <br />
+            Password must coantain at least 1 number, uppercase, and lowercase letters.
+          </p>
         </td>
       </tr>
     </table>
