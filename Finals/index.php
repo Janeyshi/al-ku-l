@@ -182,8 +182,8 @@
                       <div class="flip-card-back">
                         <br /><br />
                         <h3 class="glow" style="font-size: 24px;">Janedel Ac-ac</h3>
-                        <br /><br />
-                        <p style="color:black;">Content Manager</p>
+                        <br />
+                        <p style="color:black;">Content Manager and Front end Developer</p>
                         <p style="color:black;">"An alcohol a day keeps the ulcer away"</p>
                       </div>
                     </div>
@@ -199,8 +199,8 @@
                       <div class="flip-card-back">
                         <br /><br />
                         <h1 class="glow" style="font-size: 24px;">Benedick Macayan</h1>
-                        <br /><br />
-                        <p style="color:black;">Researcher</p>
+                        <br />
+                        <p style="color:black;">Researcher and Front end Developer</p>
                         <p style="color:black;">"I LOVE MILF AND LOLIS"</p>
                       </div>
                     </div>
@@ -216,6 +216,7 @@
                       <div class="flip-card-back">
                         <br /><br />
                         <h1 class="glow" style="font-size: 22px;">Everyone</h1>
+                        <br />
                         <p style="color:black;">Regradless of the assigned job everyone contributed in the code as well.</p>
                       </div>
                     </div>
