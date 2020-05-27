@@ -208,7 +208,7 @@
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
                         <img src="images/team.png" alt="pic ni ben"  height="250px" width="250px">
-                      </div><br />
+                      </div>
                       <div class="flip-card-back">
                         <br /><br />
                         <h1 class="glow" style="font-size: 22px;">Everyone</h1>

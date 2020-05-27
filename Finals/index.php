@@ -180,9 +180,9 @@
                         <img src="images/team/janey.jpg" alt="pic ni janey"  height="250px" width="250px">
                       </div>
                       <div class="flip-card-back">
-                        <br /><br />
-                        <h3 class="glow" style="font-size: 24px;">Janedel Ac-ac</h3>
                         <br />
+                        <h3 class="glow" style="font-size: 24px;">Janedel Ac-ac</h3>
+                        <br /><br />
                         <p style="color:black;">Content Manager and Front end Developer</p>
                         <p style="color:black;">"An alcohol a day keeps the ulcer away"</p>
                       </div>
@@ -222,6 +222,7 @@
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </section>
