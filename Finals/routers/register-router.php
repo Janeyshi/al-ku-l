@@ -12,6 +12,7 @@ if (isset($_POST['reg_user'])) {
   $lastName = mysqli_real_escape_string($con, $_POST['lastName']);
   $suffix = mysqli_real_escape_string($con, $_POST['suffix']);
   echo 'password: '.$password;
+  $success = 1;
   if (strtolower($password) != $password)
   {
     if (strtoupper($password) != $password)
@@ -26,19 +27,21 @@ if (isset($_POST['reg_user'])) {
 
           } else if($success == 1) {
               echo 'good';
+              $password_encrypted = password_hash($password, PASSWORD_BCRYPT);
               $query = "INSERT INTO accounts (username, password, email, firstName, middleName, lastName, suffix) VALUES (?, ?, ?, ?, ?, ?, ?)";
               $stmt = $con->prepare($query);
-              $stmt->bind_param("sssssss", $username, $password, $email, $firstName, $middleName, $lastName, $suffix);
+              $stmt->bind_param("sssssss", $username, $password_encrypted, $email, $firstName, $middleName, $lastName, $suffix);
               $stmt->execute();
               $_SESSION['username'] = $username;
               $_SESSION['success'] = '<h3 class="center-text">Registration Complete</h3>';
+              $success -= 1;
               header('location: ../login.php');
+
           }
         }
       } else {
           echo "<br />MUST HAVE A NUMBER";
           $_SESSION['number'] = '<h3 class="center-text"> PASSWORD MUST HAVE ONE NUMBER!!! </h3>';
-          $success = false;
           header('location: ../register.php');
       }
 

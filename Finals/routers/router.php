@@ -8,10 +8,27 @@ $user->instantiate();
 $user->__set('username', $_POST['username']);
 $user->__set('password', $_POST['password']);
 
-$result = mysqli_query($con, "SELECT * FROM accounts WHERE username='$user->username' AND password='$user->password'");
+$password_encrypted ="";
+echo '<br /> '.$user->password;
+$result = mysqli_query($con, "SELECT * FROM accounts WHERE username ='$user->username'");
+while($row = mysqli_fetch_array($result)){
+	$password_encrypted = $row['password'];
+}
+echo '<br /> '.$password_encrypted;
+
+if (password_verify($user->password, $password_encrypted)) {
+    // Success!
+    echo '<br /> Password Matches';
+		$success = true;
+}else {
+    // Invalid credentials
+    echo '<br /> Password Mismatch';
+		$success=false;
+}
+
+$result = mysqli_query($con, "SELECT * FROM accounts WHERE username ='$user->username' AND password='$password_encrypted'");
 while($row = mysqli_fetch_array($result))
 {
-	$success = true;
 	$user_id = $row['id'];
 	$user_name = $row['username'];
 }
