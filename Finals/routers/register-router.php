@@ -23,25 +23,41 @@ if (isset($_POST['reg_user'])) {
       {
         if (preg_match('~[0-9]+~', $password)) {
           $result = mysqli_query($con, "SELECT * FROM accounts");
-          while($row = mysqli_fetch_array($result)){
-            if(strcmp($row['username'], $username) == 0 || strcmp($row['email'], $email) == 0){
-              echo "User exist";
-              	$_SESSION['exist'] = '<h3 class="center-text"> USER ALREADY EXIST!!! </h3>';
-                header('location: ../register.php');
+          if ($result->num_rows > 0) {
+          // output data of each row
+            while($row = $result->fetch_assoc()) {
 
-            } else if($success == 1) {
-                echo 'good';
-                $password_encrypted = password_hash($password, PASSWORD_BCRYPT);
-                $query = "INSERT INTO accounts (username, password, email, firstName, middleName, lastName, suffix) VALUES (?, ?, ?, ?, ?, ?, ?)";
-                $stmt = $con->prepare($query);
-                $stmt->bind_param("sssssss", $username, $password_encrypted, $email, $firstName, $middleName, $lastName, $suffix);
-                $stmt->execute();
-                $_SESSION['username'] = $username;
-                $_SESSION['success'] = '<h3 class="center-text">Registration Complete</h3>';
-                $success -= 1;
-                header('location: ../login.php');
+              if(strcmp($row['username'], $username) == 0 || strcmp($row['email'], $email) == 0){
+                echo "User exist";
+                	$_SESSION['exist'] = '<h3 class="center-text"> USER ALREADY EXIST!!! </h3>';
+                  header('location: ../register.php');
 
+              } else if($success == 1) {
+                  echo 'good';
+                  $password_encrypted = password_hash($password, PASSWORD_BCRYPT);
+                  $query = "INSERT INTO accounts (username, password, email, firstName, middleName, lastName, suffix) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                  $stmt = $con->prepare($query);
+                  $stmt->bind_param("sssssss", $username, $password_encrypted, $email, $firstName, $middleName, $lastName, $suffix);
+                  $stmt->execute();
+                  $_SESSION['username'] = $username;
+                  $_SESSION['success'] = '<h3 class="center-text">Registration Complete</h3>';
+                  $success -= 1;
+                  header('location: ../login.php');
+
+              }
             }
+          } else {
+            echo 'good';
+            $password_encrypted = password_hash($password, PASSWORD_BCRYPT);
+            $query = "INSERT INTO accounts (username, password, email, firstName, middleName, lastName, suffix) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $con->prepare($query);
+            $stmt->bind_param("sssssss", $username, $password_encrypted, $email, $firstName, $middleName, $lastName, $suffix);
+            $stmt->execute();
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = '<h3 class="center-text">Registration Complete</h3>';
+            $success -= 1;
+            header('location: ../login.php');
+
           }
         } else {
             echo "<br />MUST HAVE A NUMBER";
