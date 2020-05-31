@@ -40,7 +40,6 @@ if (isset($_POST['reg_user'])) {
                 $_SESSION['success'] = '<h3 class="center-text">Registration Complete</h3>';
                 $success -= 1;
                 header('location: ../login.php');
-
             }
           }
         } else {
