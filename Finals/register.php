@@ -24,13 +24,16 @@ if (isset($_SESSION['sess_id'])) {
     } else if(isset($_SESSION['upper'])){
         echo $_SESSION['upper'];
         unset($_SESSION['upper']);
-      } else if(isset($_SESSION['lower'])){
-          echo $_SESSION['lower'];
-          unset($_SESSION['lower']);
-        } else if(isset($_SESSION['number'])){
-            echo $_SESSION['number'];
-            unset($_SESSION['number']);
-          }
+    } else if(isset($_SESSION['lower'])){
+        echo $_SESSION['lower'];
+        unset($_SESSION['lower']);
+    } else if(isset($_SESSION['number'])){
+        echo $_SESSION['number'];
+        unset($_SESSION['number']);
+    } else if (isset($_SESSION['email'])){
+        echo $_SESSION['email'];
+        unset($_SESSION['email']);
+    }
    ?>
     <table align="center">
       <!-- USERNAME -->
@@ -79,7 +82,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Middle Name</label>
         </td>
         <td>
-          <input type="text" name="middleName" required>
+          <input type="text" name="middleName">
         </td>
       </tr>
 
@@ -99,7 +102,7 @@ if (isset($_SESSION['sess_id'])) {
           <label>Suffix</label>
         </td>
         <td>
-          <input type="text" name="suffix" required>
+          <input type="text" name="suffix">
         </td>
       </tr>
       <tr>
