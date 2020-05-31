@@ -80,10 +80,9 @@ span {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
-          
+
           <h5>View Cart Page</h5>
-          
-          <form action="routers/remove.php" method="post">
+          <form action="routers/remove-update.php" method="post">
             <?php
             $user_id = $_SESSION['user_id'];
             $sql = "SELECT * FROM cart where user_id = '$user_id'";
@@ -91,8 +90,6 @@ span {
             $ctr = 0;
             if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
-              // echo "id: " . $row["id"]. " - Product Name: " . $row["productName"]. " " . $row["imgSrc"]. "- Product Quantity: " . $row["productQty"]. "<br>";
-              // echo '<img src="'.$row[imageSrc]'" alt="rum 1" height="700px" width="700px" class="productImageBig"/>'
               $ctr = $ctr + 1;
               echo '<table cellspacing="1" cellpadding="5">
               <tr>
@@ -164,10 +161,10 @@ span {
                 }
                 ?> >Please choose a payment method to continue:</h5>
               </th>
-            </tr>           
+            </tr>
           </table>
             <tr>
-              <td>   
+              <td>
                 <button class="btn" id="button-2" name="cash" <?php
                   if (isset($_SESSION['disable'])) {
                     echo $_SESSION['disable'];
@@ -177,20 +174,20 @@ span {
                 </button>
 
               </td>
-              <td>                 
+              <td>
                 <button class="btn" id="button-2" name="card" <?php
                   if (isset($_SESSION['disable'])) {
                     echo $_SESSION['disable'];
                 }?>>
                   <div id="dub-arrow"><i class="fas fa-credit-card fa-2x"></i></div>
                   <span>Card</span>
-                </button> 
+                </button>
               </td>
-            </tr>          
+            </tr>
         </form>
       </table>
 
-  
+
   </tbody>
 
   </table>

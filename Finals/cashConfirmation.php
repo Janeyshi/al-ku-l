@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$server_user = "root";
-$server_pass = "";
-$dbname = "alakshop";
-$con = new mysqli($servername, $server_user, $server_pass, $dbname);
-session_start();
+include 'databaseConnections/connect.php';
 $user_id = $_SESSION['user_id'];
 if (isset($_SESSION['sess_id'])) {
   $totalQty = 0;
@@ -17,7 +12,7 @@ if (isset($_SESSION['sess_id'])) {
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Cash Confirm Checkout </h3>
-    <form action="routers/cash-confirmation-router.php" method="post">
+    <form action="receipt.php" method="post">
       <table class="table">
 
         <tbody>
@@ -47,10 +42,10 @@ if (isset($_SESSION['sess_id'])) {
               <th style="text-align:right;" width="2%">Quantity</th>
               <th style="text-align:right;" width="20%">Price</th>
             </tr>
-            
+
             <?php
-            
-            
+
+
             $sql = "SELECT * FROM cart where user_id = '$user_id'";
             $result = $con->query($sql);
             $ctr = 0;
@@ -60,7 +55,7 @@ if (isset($_SESSION['sess_id'])) {
                 $totalQty += $row["productQty"];
                 $totalPrice += $row["productPrice"];
                 $ctr = $ctr + 1;
-              
+
               echo '
                 <tr style="border: 1px solid black;">
                   <td style="border: 1px solid black;">
@@ -76,7 +71,7 @@ if (isset($_SESSION['sess_id'])) {
                     <input type="hidden" name="origPrice'.$ctr.'" value="'.$row["originalPrice"].'">
                   </td>
                 </tr>
-                ';              
+                ';
 
               }
             }else {
@@ -87,10 +82,10 @@ if (isset($_SESSION['sess_id'])) {
              ?>
              <tr style="border: 1px solid black;">
                 <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>
-               
+
                 <td align="right"><?php echo $totalQty ?></td>
-                
-                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>                                 
+
+                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
              <tr>
               <td><strong>Payment Method: </strong> <?php echo$mod ?></td></th>
             </tr>

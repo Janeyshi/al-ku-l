@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  include 'databaseConnections/connect.php';
   if (isset($_SESSION['sess_id'])) {
     require_once('view/header-user.php');
   } else {
@@ -13,7 +13,6 @@
        <h5>Cash Checkout Page</h5>
        <?php
        $id = $_SESSION['user_id'];
-       $con = mysqli_connect('localhost', 'root', '', 'alakshop');
        $address;
        $empty = "";
        $result = mysqli_query($con, "SELECT address FROM accounts WHERE id =".$_SESSION['user_id']."");
@@ -29,8 +28,7 @@
           <label>Enter your Address:</label>
         </td>
         <td>
-          <input type="text" name="address" value="
-          <?php
+          <input type="text" name="address" value="<?php
 
           if($address == $empty){
             echo $empty;

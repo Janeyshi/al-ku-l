@@ -1,6 +1,6 @@
 <?php
-  session_start();
-  include("model/product.php");
+    include("model/product.php");
+    include 'databaseConnections/connect.php';
   if (isset($_SESSION['sess_id'])) {
     require_once('view/header-user.php');
   } else {
@@ -19,7 +19,7 @@
               $prod = new Product();
 
               //connect to db
-              $con = mysqli_connect('localhost', 'root', '', 'alakshop');
+
 
               //rum datas
               if (isset($_POST['1'])) {
@@ -127,6 +127,8 @@
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
+              } else {
+                header("location: browse-product.php");
               }
             ?>
             <!-- Show the picked item -->
@@ -160,7 +162,7 @@
         <br />
         <center>
         <div>
-          Quantity: <input type="number" name="productQty"  min="0" required/>
+          Quantity: <input type="number" name="productQty"  min="1" required/>
           <br /><br />
           <button type="submit" value="Add to Cart" class="btn btn-danger" name="reg_user"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
           <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>

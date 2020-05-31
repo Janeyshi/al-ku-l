@@ -1,10 +1,5 @@
 <?php
-$servername = "localhost";
-$server_user = "root";
-$server_pass = "";
-$dbname = "alakshop";
-$con = new mysqli($servername, $server_user, $server_pass, $dbname);
-session_start();
+include 'databaseConnections/connect.php';
 $user_id = $_SESSION['user_id'];
 if (isset($_SESSION['sess_id'])) {
   $totalQty = 0;
@@ -17,7 +12,7 @@ if (isset($_SESSION['sess_id'])) {
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Card Confirm Checkout </h3>
-    <form action="routers/card-confirmation-router.php" method="post">
+    <form action="receipt.php" method="post">
       <table class="table">
 
         <tbody>
@@ -72,8 +67,6 @@ if (isset($_SESSION['sess_id'])) {
                   <td style="text-align:right; border: 1px solid black;">
                     Php '.$row["productPrice"].'
                     <br />
-                    <input type="hidden" name="price'.$ctr.'" value="'.$row["productPrice"].'">
-                    <input type="hidden" name="origPrice'.$ctr.'" value="'.$row["originalPrice"].'">
                   </td>
                 </tr>
                 ';
@@ -88,17 +81,9 @@ if (isset($_SESSION['sess_id'])) {
              ?>
              <tr style="border: 1px solid black;">
                 <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>
-
-
                 <td align="right"><?php echo $totalQty ?></td>
-
                 <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
              </tr>
-
-
-                <td align="right"><?php echo $totalQty; ?></td>
-
-                <td align="right" style="border: 1px solid black;"> Php <?php echo $totalPrice ?></td>
 
              <tr>
               <td><strong>Payment Method: </strong> <?php echo$mod; ?></td></th>

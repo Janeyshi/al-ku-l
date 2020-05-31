@@ -16,9 +16,9 @@
               <?php
                 $result = mysqli_query($con, "SELECT * FROM accounts WHERE id =".$_SESSION['user_id']."");
                 while($row = mysqli_fetch_array($result)){
-                  echo '<table cellspacing="10" cellpadding="10" border="1px solid black">';
+                  echo '<table cellspacing="10" cellpadding="10" border="1px solid black" width=100%>';
                   echo '  <tr>';
-                  echo '    <th>';
+                  echo '    <th width=20%>';
                   echo '      Username: ';
                   echo '    </th>';
                   echo '    <td>';
@@ -26,7 +26,7 @@
                   echo '    </td>';
                   echo '  </tr>';
                   echo '  <tr>';
-                  echo '   <th>';
+                  echo '   <th width=20%>';
                   echo '      First Name: ';
                   echo '   </th>';
                   echo '   <td>';
@@ -34,7 +34,7 @@
                   echo '   </td>';
                   echo '  </tr>';
                   echo '  <tr>';
-                  echo '    <th>';
+                  echo '    <th width=20%>';
                   echo '      Middle Name: ';
                   echo '    </th>';
                   echo '    <td>';
@@ -42,7 +42,7 @@
                   echo '    </td>';
                   echo '  </tr>';
                   echo '  <tr>';
-                  echo '   <th>';
+                  echo '   <th width=20%>';
                   echo '      Last Name: ';
                   echo '   </th>';
                   echo '   <td>';
@@ -50,7 +50,7 @@
                   echo '   </td>';
                   echo '  </tr>';
                   echo '  <tr>';
-                  echo '    <th>';
+                  echo '    <th width=20%>';
                   echo '      Suffix: ';
                   echo '    </th>';
                   echo '    <td>';
@@ -58,7 +58,7 @@
                   echo '    </td>';
                   echo '  </tr>';
                   echo '  <tr>';
-                  echo '   <th>';
+                  echo '   <th width=20%>';
                   echo '      Email: ';
                   echo '   </th>';
                   echo '   <td>';

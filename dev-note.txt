@@ -20,4 +20,20 @@ Logged in User can do
 - make a .htaccess file and put this code "ErrorDocument 404 /al-ku-l/Finals/error-404.php"
 /al-ku-l/Finals/error-404.php will depend on your root directory make sure to put .htaccess in your root which is htdocs in xampp
 
+Contributions // need to be edited
+
+Dick - Login and router.php and research  vision-mission
+Janey - Register and register-router.Php about us content
+Denise - Receipt, confirmation, Design
+Liam - login, Browse, Checkout
+JC - Single product page, search, view cart
+
+
+
+
+
+
+//Password checker anad hashing for password in db
+
+
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php

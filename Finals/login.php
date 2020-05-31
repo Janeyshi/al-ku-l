@@ -41,11 +41,15 @@ if (isset($_SESSION['sess_id'])) {
               </td>
             </tr>
             <tr>
+              <td></td>
               <td>
                 <input type="submit" value="Login" class="btn btn-success">
               </td>
+            </tr>
+            <tr>
+              <td></td>
               <td>
-                <a href="register.php"><input type="register" value="Register" class="btn btn-danger"></a>
+                <a href="register.php"><h5 class="btn btn-danger">Register</h5></a>
               </td>
             </tr>
           </table>
