@@ -146,7 +146,7 @@
                       <div class="flip-card-back">
                         <br /><br />
                         <h3 class="glow" style="font-size: 22px;">James Liam De jesus</h3>
-                        <br /><br />
+                        <br />
                         <p style="color:black;">Back and Front end Developer</p>
                         <p style="color:black;">"I LAB PHP"</p>
                       </div>
@@ -182,7 +182,7 @@
                       <div class="flip-card-back">
                         <br />
                         <h3 class="glow" style="font-size: 24px;">Janedel Ac-ac</h3>
-                        <br /><br />
+                        <br />
                         <p style="color:black;">Content Manager and Back end Developer</p>
                         <p style="color:black;">"An alcohol a day keeps the ulcer away"</p>
                       </div>
