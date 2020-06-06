@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2020 at 06:35 AM
+-- Generation Time: Jun 06, 2020 at 04:46 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -38,27 +38,11 @@ CREATE TABLE `accounts` (
   `suffix` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `modeOfPayment` varchar(255) NOT NULL,
-  `creditCardNumber` int(11) NOT NULL,
+  `creditCardNumber` varchar(255) NOT NULL,
   `expirationDate` varchar(255) NOT NULL,
   `CCV` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `accounts`
---
-
-INSERT INTO `accounts` (`id`, `username`, `password`, `firstName`, `middleName`, `lastName`, `suffix`, `email`, `modeOfPayment`, `creditCardNumber`, `expirationDate`, `CCV`, `address`) VALUES
-(1, 'test', '1', 'h', 'i', 'o', 'P', 'Senpia@Kimochi.eddu.ph\r\n', 'cash', 12345, '2332', '1234', '          Sa Puso Ni Crush'),
-(2, 'S', '1', 'fff', 'D', 'd', 'd', 'saasdda@fdfda', '', 0, '', '', ''),
-(3, 'jjnjn', ',,mll,', 'lll', ';,;,;.', 'hgugui', 'iyfdftyhiop', 'fxfxfz@gujhjk', '', 0, '', '', ''),
-(4, 'Benedick', '1', 'Bene', 'D', 'Dick', 'BD', 'GGser@Onichan.edu.ph', '', 0, '', '', ''),
-(5, 'e', '1', 'ww', 'w', 'www', 'w', 'asda@a', '', 0, '', '', ''),
-(6, 'D', 's', 's', 'd', 'dd', 'd', 'GGser@FOOK.edu.ph', '', 0, '', '', ''),
-(7, 'jameesliaam', 'jamesliam', 'James Liam', 'Raymundo', 'De Jesus', '', 'jamesliamdejesus@gmail.com', '', 0, '', '', ''),
-(12, 'admin', '', 'GG', 'SD', 'SER', 'GSM', 'asda@a', '', 0, '', '', ''),
-(13, 'admin', '1', 'GG', 'SD', 'SER', 'GSM', 'asda@a', '', 0, '', '', ''),
-(14, 'admin', '1', 'GG', 'SD', 'SER', 'GSM', 'asda@a', 'card', 12345678, '2345', '1234', 'Sa Puso Ni Crush2');
 
 -- --------------------------------------------------------
 
@@ -81,8 +65,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `productName`, `productPrice`, `productImg`, `productQty`, `originalPrice`, `user_id`) VALUES
-(32, 'Bacardi Superior', 557, 'images/BacardiSuperior.jpg', 1, 557, 1),
-(35, 'Appleton Estate', 1500, 'images/AppletonEstate.jpg', 1, 1500, 14);
+(41, 'Appleton Estate', 1500, 'images/AppletonEstate.jpg', 1, 1500, 18),
+(46, 'Bacardi Superior', 557, 'images/BacardiSuperior.jpg', 1, 557, 33);
 
 -- --------------------------------------------------------
 
@@ -153,13 +137,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `products`
