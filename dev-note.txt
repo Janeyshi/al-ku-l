@@ -22,18 +22,13 @@ Logged in User can do
 
 Contributions // need to be edited
 
-Dick - Login and router.php and research  vision-mission
-Janey - Register and register-router.Php about us content
-Denise - Receipt, confirmation, Design
-Liam - login, Browse, Checkout
-JC - Single product page, search, view cart
+Dick - Login and register and vision-mission content
+Janey - browse and singular product page and about us content
+Denise - Receipt, confirmation, checkout and design
+Liam  - login and register and drinks research
+JC - Single product page, search, view cart and design
 
 
-
-
-
-
-//Password checker anad hashing for password in db
 
 
 - to check copy this link: http://localhost/al-ku-l/Finals/index.php
