@@ -33,6 +33,9 @@ if (isset($_SESSION['sess_id'])) {
     } else if (isset($_SESSION['email'])){
         echo $_SESSION['email'];
         unset($_SESSION['email']);
+    } else if (isset($_SESSION['confirmPass'])){
+        echo $_SESSION['confirmPass'];
+        unset($_SESSION['confirmPass']);
     }
    ?>
     <table align="center">
@@ -53,6 +56,16 @@ if (isset($_SESSION['sess_id'])) {
         </td>
         <td>
           <input type="password" name="password" required>
+        </td>
+      </tr>
+
+      <!-- confirm password -->
+      <tr>
+        <td>
+           <label>Confirm Password</label>
+        </td>
+        <td>
+          <input type="password" name="confirmpassword" required>
         </td>
       </tr>
 

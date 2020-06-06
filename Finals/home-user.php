@@ -197,7 +197,7 @@
                         <h1 class="glow" style="font-size: 24px;">Benedick Macayan</h1>
                         <br />
                         <p style="color:black;">Researcher and Front end Developer</p>
-                        <p style="color:black;">"I LOVE MILF AND LOLIS"</p>
+                        <p style="color:black;">"JUST BE YOURSELF"</p>
                       </div>
                     </div>
                   </div>

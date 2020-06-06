@@ -82,7 +82,7 @@ if (isset($_SESSION['sess_id'])) {
               echo '
                 <tr style="border: 1px solid black;">
                   <td style="border: 1px solid black;">
-                    <img src="'.$row["productImg"].'" alt="rum 1" height="100px" width="100px" class="productImageBig"/>'.'<strong>'.$row["productName"].'</strong>
+                    <img src="'.$row["productImg"].'" alt="rum 1" height="100px" width="100px" class="productImageBig"/>'.'<strong> '.$row["productName"].'</strong>
                   </td>
                   <td style="text-align:right;">
                     '.$row["productQty"].'
