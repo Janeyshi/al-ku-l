@@ -25,7 +25,7 @@ Contributions // need to be edited
 benedick - Login and register and vision-mission content
 Janey - browse and singular product page and about us content
 Denise - Receipt, confirmation, checkout and design
-Liam  - login and register and drinks research
+Liam  - login and register and drinks research and design
 JC - Single product page, search, view cart and design
 
 

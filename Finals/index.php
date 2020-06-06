@@ -183,7 +183,7 @@
                         <br />
                         <h3 class="glow" style="font-size: 24px;">Janedel Ac-ac</h3>
                         <br /><br />
-                        <p style="color:black;">Content Manager and Front end Developer</p>
+                        <p style="color:black;">Content Manager and Back end Developer</p>
                         <p style="color:black;">"An alcohol a day keeps the ulcer away"</p>
                       </div>
                     </div>
@@ -200,7 +200,7 @@
                         <br /><br />
                         <h1 class="glow" style="font-size: 24px;">Benedick Macayan</h1>
                         <br />
-                        <p style="color:black;">Researcher and Front end Developer</p>
+                        <p style="color:black;">Researcher and Back end Developer</p>
                         <p style="color:black;">"JUST BE YOURSELF"</p>
                       </div>
                     </div>
