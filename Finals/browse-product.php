@@ -7,6 +7,24 @@
     require_once('view/header.php');
   }
  ?>
+ <style type="text/css">
+   .cart  {
+    background-color: #555555;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  a { 
+    color: white; 
+  }
+
+  #mybutton {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+  }
+ </style>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
       <table class="table">
         <thead>
@@ -282,6 +300,9 @@
             </tr>
           </table>
         </tbody>
+        <div id="mybutton">
+         <button class="cart"><a href="view-cart.php">View Cart <i class="fas fa-shopping-cart"></i></a></button>
+        </div>
       </table>
     </form>
     <?php require_once('view/footer.php');

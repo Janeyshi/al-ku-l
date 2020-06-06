@@ -10,6 +10,51 @@ if (isset($_SESSION['sess_id'])) {
 <?php
   require_once('view/header-user.php');
  ?>
+  <style type="text/css">
+   .sub-main{
+    margin:1px;
+    float: left;
+  }
+
+  .button-two {
+    text-align: center;
+    cursor: pointer;
+    font-size:14px;
+    border-radius: 8px;
+    background-color:#555555;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 120px;
+    transition: all 0.5s;
+  }
+
+  .button-two span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button-two span:after {
+    content: '»';
+    font-size: 16px;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button-two:hover span {
+    padding-right: 25px;
+  }
+
+  .button-two:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+</style>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Card Confirm Checkout </h3>
     <form action="receipt.php" method="post">
@@ -95,8 +140,10 @@ if (isset($_SESSION['sess_id'])) {
           <br>
           <div>
          </div>
+          <div class="sub-main">
+            <button class="button-two"><span>Submit</span></button>
+          </div>
 
-          <button class="btn btn-success"> Submit </button>
         </tbody>
       </table>
     </form>

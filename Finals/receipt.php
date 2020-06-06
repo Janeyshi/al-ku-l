@@ -16,6 +16,44 @@ if (isset($_SESSION['sess_id'])) {
 <?php
   require_once('view/header-user.php');
 ?>
+<style type="text/css">
+  .btn3d {
+  position: relative;
+  top: -6px;
+  border: 0;
+  transition: all 40ms linear;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+  -moz-outline-style: none;
+  outline: medium none;
+}
+
+.btn3d:active,
+.btn3d.active {
+  top: 2px;
+}
+
+.btn3d.btn-white {
+  color: #666666;
+  box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255, 255, 255, 0.10) inset, 0 8px 0 0 #f5f5f5, 0 8px 8px 1px rgba(0, 0, 0, .2);
+  background-color: #fff;
+}
+
+.btn3d.btn-white:active,
+.btn3d.btn-white.active {
+  color: #666666;
+  box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, .1);
+  background-color: #fff;
+}
+
+</style>
 
 <?php
 
@@ -115,8 +153,9 @@ if (isset($_SESSION['sess_id'])) {
       <br><br>
 
       <div align="center">
-        <button class="btn btn-success" >DONE</button>
+        <button class="btn3d btn btn-white btn-lg"><span class="glyphicon glyphicon-tag"></span> DONE</button>
       </div>
+        
     </form>
 
     <?php require_once('view/footer.php');}
