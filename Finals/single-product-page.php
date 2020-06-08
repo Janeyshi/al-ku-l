@@ -170,7 +170,7 @@
         </center>
       </form>';
     } else {
-        echo '<a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>';
+        echo '<a href="browse-product.php"><input type="button" value="Back to Browse Products" class="btn btn-secondary"></a>';
       }
 
       require_once('view/footer.php');

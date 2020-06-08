@@ -15,5 +15,5 @@ $result = mysqli_query($db, $query);
 
 $_SESSION['deleted_success'] = '<h3 class="center-text">Deleted to cart</h3>';
 
-header("location: ../home-user.php");
+header("location: ../index.php");
 ?>

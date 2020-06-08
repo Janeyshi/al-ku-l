@@ -155,7 +155,7 @@ span {
           <table cellspacing="3" cellpadding="2">
             <tr>
               <th>
-                <h5<?php
+                <h5 <?php
                   if (isset($_SESSION['disable'])) {
                     echo $_SESSION['disable'];
                 }

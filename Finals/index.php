@@ -1,9 +1,10 @@
 <?php
   session_start();
-  require_once('view/header.php');
   if (isset($_SESSION['sess_id'])) {
-    	header("location: home-user.php");
+    	require_once('view/header-user.php');
   } else {
+      require_once('view/header.php');
+  }
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <style>
@@ -73,7 +74,11 @@
       <table class="table">
         <thead>
           <center>
-            <h1 class="glow"> Hello Guest</h1>
+            <h1 class="glow"> Hello <?php if (isset($_SESSION['sess_id'])) {
+              	echo $_SESSION['user_name'];
+            } else {
+                echo "Guest";
+            } ?></h1>
           </center>
           <br /><br /><br />
         </thead>
@@ -229,4 +234,4 @@
         </tbody>
       </table>
     </form>
-  <?php require_once('view/footer.php'); }?>
+  <?php require_once('view/footer.php'); ?>

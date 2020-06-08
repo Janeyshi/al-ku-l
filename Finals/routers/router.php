@@ -38,7 +38,7 @@ if ($success == true) {
 	$_SESSION['sess_id']=session_id();
 	$_SESSION['user_id'] = $user_id;
 	$_SESSION['user_name'] = $user_name;
-	header("location: ../home-user.php");
+	header("location: ../index.php");
 } else {
 	session_start();
 	$user_id = "Guest";
