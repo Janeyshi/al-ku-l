@@ -12,7 +12,7 @@ if (isset($_SESSION['sess_id'])) {
  ?>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Card Confirm Checkout </h3>
-    <form action="receipt.php" method="post">
+    <form action="routers/delete-to-cart.php" method="post">
       <table class="table">
 
         <tbody>

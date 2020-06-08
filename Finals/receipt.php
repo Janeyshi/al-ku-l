@@ -35,7 +35,7 @@ if (isset($_SESSION['sess_id'])) {
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <h3 class="card-title">Receipt </h3>
     <h4 style="text-align: center;">Thank you</h4><hr>
-    <form action="routers/delete-to-cart.php" method="post">
+    <form action="index.php" method="post">
 
       <div align="center">
          <p><strong>Hi <?php echo $username ?>!<br></strong></p>
@@ -68,40 +68,46 @@ if (isset($_SESSION['sess_id'])) {
 
             <?php
 
+            $ctr = $_POST['ctr'];
+            $convert = (int)$ctr;
+            $productImg_tagname = "productImg";
+            $productName_tagname = "productName";
+            $productQty_tagname = "productQty";
+            $productPrice_tagname = "productPrice";
+            $originalPrice_tagname = "originalPrice";
 
-            $sql = "SELECT * FROM cart where user_id = '$user_id'";
-            $result = $con->query($sql);
-            $ctr = 0;
-            if($result->num_rows > 0){
+            for($i = $convert;$i > 0; $i--){
+              $productImg_Name = $i . $productImg_tagname;
+              $productName_Name = $i . $productName_tagname;
+              $productQty_Name = $i . $productQty_tagname;
+              $productPrice_Name = $i . $productPrice_tagname;
+              $originalPrice_Name = $i . $originalPrice_tagname;
 
-              while($row = $result->fetch_assoc()){
-                $totalQty += $row["productQty"];
-                $totalPrice += $row["productPrice"];
-              $ctr = $ctr + 1;
+              $productImg = $_POST[$productImg_Name];
+              $productName = $_POST[$productName_Name];
+              $productQty = $_POST[$productQty_Name];
+              $productPrice = $_POST[$productPrice_Name];
+              $originalPrice = $_POST[$originalPrice_Name];
+
+              echo 'Hello';
 
               echo '
                 <tr style="border: 1px solid black;">
                   <td style="border: 1px solid black;">
-                    <img src="'.$row["productImg"].'" alt="rum 1" height="100px" width="100px" class="productImageBig"/>'.'<strong> '.$row["productName"].'</strong>
+                    <img src="'.$productImg.'" alt="rum 1" height="100px" width="100px" class="productImageBig"/>'.'<strong> '.$productName.'</strong>
                   </td>
                   <td style="text-align:right;">
-                    '.$row["productQty"].'
+                    '.$productQty.'
                   </td>
                   <td style="text-align:right; border: 1px solid black;">
-                    Php '.$row["productPrice"].'
+                    Php '.$productPrice.'
                     <br />
-                    <input type="hidden" name="price'.$ctr.'" value="'.$row["productPrice"].'">
-                    <input type="hidden" name="origPrice'.$ctr.'" value="'.$row["originalPrice"].'">
                   </td>
                 </tr>
                 ';
-
-              }
-            }else {
-              echo '<h3 class="center-text">NO ITEMS IN CART!</h3>';
-              $_SESSION['disable'] = "disabled";
+                $totalQty = $totalQty + $productQty;
+                $totalPrice = $totalPrice + $productPrice;
             }
-            $con->close();
              ?>
              <tr style="border: 1px solid black;">
                 <td align="right" style="border: 1px solid black;"><strong>Total: </strong></td>

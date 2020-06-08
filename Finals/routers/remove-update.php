@@ -10,7 +10,7 @@ $id = "";
 $originalPriceName = "origPrice";
 $user_id = $_SESSION['user_id'];
 echo $convert;
-//SWEET CHILD OF MINEEEE
+
 for($i = $convert;$i > 0; $i--){
   $idTagName = $idName . $i;  //this to get row id
   $qtyName = $QtyName . $i; //this to get productQty
