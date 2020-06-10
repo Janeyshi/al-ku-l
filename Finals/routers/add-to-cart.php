@@ -31,5 +31,5 @@ if (isset($_POST['reg_user'])) {
     }
     //comment the two line below to debug
   	$_SESSION['insert_success'] = '<h3 class="center-text">Added to cart</h3>';
-  	header('location: ../browse-product.php');
+  	header('location: ../pages/browse-product.php');
 }

@@ -18,7 +18,7 @@ if (isset($_POST['reg_user'])) {
   if ($date1 < $date2) {
     echo 'Card is expired...';
     $_SESSION['expired'] = '<h3 class="center-text">Card is expired</h3>';
-  	header('location: ../cardCheckout.php');
+  	header('location: ../pages/cardCheckout.php');
   } else {
     echo 'valid';
     $query = "UPDATE accounts SET address = ?, creditCardNumber = ?, expirationDate = ?, CCV = ?  WHERE id = ?";
@@ -26,7 +26,7 @@ if (isset($_POST['reg_user'])) {
     $stmt->bind_param("ssssi", $address, $creditCardNumber, $expirationDate, $CCV, $id);
     $stmt->execute();
   	$_SESSION['successAddress'] = '<h3 class="center-text">Information Inserted</h3>';
-  	header('location: ../cardConfirmation.php');
+  	header('location: ../pages/cardConfirmation.php');
   }
 }
 ?>

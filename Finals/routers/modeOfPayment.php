@@ -15,7 +15,7 @@ if (isset($_POST['cash'])) {
 
     //ONCE REGISTRATION IS SUCCESSFUL
     mysqli_query($con, $query);
-  	header('location: ../cashCheckout.php');
+  	header('location: ../pages/cashCheckout.php');
 } else if (isset($_POST['card'])) {
   $mod = "card";
   $id = $_SESSION['user_id'];
@@ -28,6 +28,6 @@ if (isset($_POST['cash'])) {
 
   //ONCE REGISTRATION IS SUCCESSFUL
   mysqli_query($con, $query);
-  	header('location: ../cardCheckout.php');
+  	header('location: ../pages/cardCheckout.php');
 }
 ?>

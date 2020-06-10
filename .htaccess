@@ -1,5 +1,5 @@
-ErrorDocument 404 /al-ku-l/Finals/error-404.php
+ErrorDocument 404 /al-ku-l/Finals/pages/error-404.php
 
 RewriteEngine On
-RewriteCond %{al-ku-l/Finals/index.php} !-f
+RewriteCond %{al-ku-l/Finals/pages/index.php} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]

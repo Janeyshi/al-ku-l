@@ -28,7 +28,7 @@ for($i = $convert;$i > 0; $i--){
       $_SESSION['message'] = '<h3 class="center-text">Unable to remove item from Cart</h3>';
     }
     mysqli_close($con);
-    header('location: ../view-cart.php');
+    header('location: ../pages/view-cart.php');
   }
   else if(isset($_POST[$btnName])){
     $id = $_POST[$idTagName];
@@ -44,7 +44,7 @@ for($i = $convert;$i > 0; $i--){
     $stmt->execute();
     $_SESSION['message'] = '<h3 class="center-text">Item Updated from Cart</h3>';
     mysqli_close($con);
-    header('location: ../view-cart.php');
+    header('location: ../pages/view-cart.php');
   }
 }
  ?>

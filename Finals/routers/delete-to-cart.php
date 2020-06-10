@@ -5,7 +5,7 @@ $sql = "SELECT * FROM cart where user_id = '$user_id'";
 $result = $con->query($sql);
 $ctr = 0;
 echo '<body onload="document.frm1.submit()">
-<form action="../receipt.php" method="post" name="frm1">
+<form action="../pages/receipt.php" method="post" name="frm1">
 <table>';
 if($result->num_rows > 0){
 

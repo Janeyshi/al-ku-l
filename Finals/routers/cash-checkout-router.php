@@ -17,6 +17,6 @@ if (isset($_POST['reg_user'])) {
 
   //ONCE REGISTRATION IS SUCCESSFUL
 	$_SESSION['successAddress'] = '<h3 class="center-text">Address Inserted</h3>';
-	header('location: ../cashConfirmation.php');
+	header('location: ../pages/cashConfirmation.php');
 }
 ?>

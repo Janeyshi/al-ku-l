@@ -5,9 +5,9 @@
     require_once('../view/header.php');
   }
  ?>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <h3 class="card-title">Search Page</h3>
-    <form action="../single-product-page.php" method="post" name="form1">
+    <form action="../pages/single-product-page.php" method="post" name="form1">
       <table class="table">
         <thead>
           <h1 class="center-text"> Product Found <i class="fas fa-search"></i></h1>
@@ -38,7 +38,7 @@
             }
             echo '<br /><br /><br /><center><a href="../browse-product.php"><input type="button" class="btn btn-secondary" value=" GO BACK "></a></center>';
           } else {
-            header("location: ../notFound.php");
+            header("location: ../pages/notFound.php");
           }
 
            ?>

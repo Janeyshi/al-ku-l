@@ -38,12 +38,12 @@ if ($success == true) {
 	$_SESSION['sess_id']=session_id();
 	$_SESSION['user_id'] = $user_id;
 	$_SESSION['user_name'] = $user_name;
-	header("location: ../index.php");
+	header("location: ../pages/index.php");
 } else {
 	session_start();
 	$user_id = "Guest";
 	$_SESSION['error'] = '<h3 class="center-text">Invalid username or password!!!</h3>';
 	$_SESSION['user_id'] = $user_id;
-	header("location: ../login.php");
+	header("location: ../pages/login.php");
 }
  ?>
