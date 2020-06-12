@@ -1,5 +1,10 @@
 <?php
-  require_once('../view/header-user.php');
+  include '../databaseConnections/connect.php';
+  if (isset($_SESSION['sess_id'])) {
+    require_once('../view/header-user.php');
+  } else {
+    header('location: ../routers/logout.php');
+  }
  ?>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <h3 class="card-title">Checkout Page</h3>

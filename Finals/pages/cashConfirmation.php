@@ -101,4 +101,7 @@ if (isset($_SESSION['sess_id'])) {
         </tbody>
       </table>
     </form>
-  <?php require_once('../view/footer.php'); }?>
+  <?php require_once('../view/footer.php'); }
+  else {
+    header('location: ../routers/logout.php');
+  }?>

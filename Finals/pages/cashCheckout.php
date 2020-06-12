@@ -3,7 +3,7 @@
   if (isset($_SESSION['sess_id'])) {
     require_once('../view/header-user.php');
   } else {
-    require_once('../view/header.php');
+    header('location: ../routers/logout.php');
   }
  ?>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
