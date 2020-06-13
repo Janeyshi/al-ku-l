@@ -1,8 +1,6 @@
 <?php
 include '../databaseConnections/connect.php';
 
-
-
 if (isset($_POST['cash'])) {
     $mod = "cash";
     $id = $_SESSION['user_id'];

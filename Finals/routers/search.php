@@ -11,6 +11,7 @@
       <table class="table">
         <thead>
           <h1 class="center-text"> Product Found <i class="fas fa-search"></i></h1>
+            <h5 class="center-text"> Click the button to proceed </h5>
         </thead>
         <tbody>
           <!-- Content -->
@@ -21,21 +22,25 @@
           $search = $_POST['searchName'];
 
           $result = mysqli_query($con, "SELECT * FROM products WHERE name like '%$search%'");
-          while($row = mysqli_fetch_array($result))
-          {
-          	$success = true;
-          	$product_id = $row['id'];
-          }
-
-          if ($success == true) {
-            echo '<center>
-              <img src="../images/found.png" alt="error 404" height="400px" width="400px" />
-            </center>';
-            echo '<input type="hidden" name="test" value = '.$product_id.'>';
-            echo '<center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> Click me to proceed </button></center>';
+          if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+              $product_id = $row['id'];
+              $product_name = $row['name'];
+              $product_img = $row['imgSrc'];
+              echo '<center>
+              <br/><br/><br/>
+              <img src="../'.$product_img.'" alt="error 404" height="400px" width="400px" />
+              </center>
+              <input type="hidden" name="test" value = '.$product_id.'>
+              <br/>
+              <center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> '.$product_name.' </button></center>
+              <br />';
+            }
+            echo '<br /><br /><br /><center><a href="../browse-product.php"><input type="button" class="btn btn-secondary" value=" GO BACK "></a></center>';
           } else {
             header("location: ../notFound.php");
           }
+
            ?>
         </tbody>
       </table>

@@ -12,7 +12,6 @@
       <table class="table">
         <thead>
           <h1 class="center-text"> The Alak Shop <i class="fas fa-cocktail"></i></h1>
-          <div class="navbar navbar-expand-lg navbar-dark bg-dark"></div>
         </thead>
         <tbody>
           <!-- Content -->
@@ -20,6 +19,7 @@
               $prod = new Product();
 
               //connect to db
+
 
               //rum datas
               if (isset($_POST['1'])) {
@@ -127,6 +127,8 @@
                   while($row = mysqli_fetch_array($result)){
                     $prod->instantiate($row['type'], $row['imgSrc'], $row['name'], $row['description'], $row['price']);
                   }
+              } else {
+                header("location: browse-product.php");
               }
             ?>
             <!-- Show the picked item -->
@@ -140,7 +142,7 @@
               <td id="rum1">
                 <span class="productName"><?php echo $prod->productName;?></span>
                 <br />
-                <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="400px" width="400px" class="productImage"/>
+                <img src="<?php echo $prod->imgSource;?>" alt="rum 1" height="700px" width="700px" class="productImageBig"/>
                 <br /><br /><br />
                 <p class="productDescription">
                   <?php echo $prod->productDesc;?>
@@ -160,7 +162,7 @@
         <br />
         <center>
         <div>
-          Quantity: <input type="number" name="productQty"  min="0" required/>
+          Quantity: <input type="number" name="productQty"  min="1" required/>
           <br /><br />
           <button type="submit" value="Add to Cart" class="btn btn-danger" name="reg_user"> <i class="fas fa-shopping-cart"></i> Add to cart</button>
           <a href="browse-product.php"><input type="button" value="Back" class="btn btn-secondary"></a>
