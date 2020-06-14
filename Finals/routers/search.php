@@ -29,14 +29,14 @@
               $product_img = $row['imgSrc'];
               echo '<center>
               <br/><br/><br/>
-              <img src="../'.$product_img.'" alt="error 404" height="400px" width="400px" />
+              <img src="'.$product_img.'" alt="error 404" height="400px" width="400px" />
               </center>
               <input type="hidden" name="test" value = '.$product_id.'>
               <br/>
               <center><button type="submit" class="btn btn-warning" name="'.$product_id.'"> '.$product_name.' </button></center>
               <br />';
             }
-            echo '<br /><br /><br /><center><a href="../browse-product.php"><input type="button" class="btn btn-secondary" value=" GO BACK "></a></center>';
+            echo '<br /><br /><br /><center><a href="../pages/browse-product.php"><input type="button" class="btn btn-secondary" value=" GO BACK "></a></center>';
           } else {
             header("location: ../pages/notFound.php");
           }

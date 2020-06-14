@@ -59,7 +59,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form action="routers/search.php" method="post">
+                  <form action="../routers/search.php" method="post">
                     <center>
                       <div>
                         <input type="text" id="searchName" name="searchName" placeholder="Search for the product name.." title="Type in a name" size="50">
